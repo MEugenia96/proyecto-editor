@@ -52,9 +52,75 @@
     </main>
 
     <aside class="ubicacion-row barra-edicion">
-        <h3>
-            IMAGEN
-        </h3>
+        <div class="ubicacion-column">
+            <h3>
+                IMAGEN
+            </h3>
+        
+            <form id="editor-imagen">
+                <label class="ubicacion-column">
+                    URL
+                    <input id="" name="" type="text">
+                </label>
+                <label>
+                    FONDO
+                    <input id="" name="" type="color">
+                </label>
+                <label>
+                    <select name="fondo" id="" form="editor-imagen">
+                        <option value="Ninguno">Ninguno</option>
+                        <option value="Aclarar">Aclarar</option>
+                        <option value="Oscurecer">Oscurecer</option>
+                        <option value="Diferencia">Diferencia</option>
+                        <option value="Luminosidad">Luminosidad</option>
+                        <option value="Multiplicar">Multiplicar</option>
+                    </select>
+                </label>
+                <div class="contenedor-filtros">
+                    <p>FILTROS</p>
+                    <label>
+                        BRILLO
+                        <input type="range">
+                    </label>
+                    <label>
+                        OPACIDAD
+                        <input type="range">
+                    </label>
+                    <label>
+                        CONTRASTE
+                        <input type="range">
+                    </label>
+                    <label>
+                        DESENFOQUE
+                        <input type="range">
+                    </label>
+                    <label>
+                        ESCALA DE GRISES
+                        <input type="range">
+                    </label>
+                    <label>
+                        SEPIA
+                        <input type="range">
+                    </label>
+                    <label>
+                        HUE
+                        <input type="range">
+                    </label>
+                    <label>
+                        SATURADO
+                        <input type="range">
+                    </label>
+                    <label>
+                        NEGATIVO
+                        <input type="range">
+                    </label>
+                </div>
+                <label>
+                    <input type="submit" value="Reestablecer filtros">
+                </label>
+                
+            </form>
+        </div>
     </aside>
 
     <script src="script.js"></script>

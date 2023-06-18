@@ -90,4 +90,9 @@ li{
     background-color: black;
 }
 
+.contenedor-filtros label{
+    display: flex;
+    flex-direction: column;
+}
+
 

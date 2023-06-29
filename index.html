@@ -39,15 +39,18 @@
         </div>
 
         <div class="ubicacion-column contenedor-memes">
-            <h2 class="campo-texto">
+            <h2 class="campo-texto" id="top-text">
                 TOP TEXT
             </h2>
             <div class="contenedor-img">
                 <img src="" alt="" id="imagen-meme" class="imagen-edit">
             </div>
-            <h2 class="campo-texto">
+            <h2 class="campo-texto" id="bottom-text">
                 BOTTOM TEXT
             </h2>
+        </div>
+        <div>
+            <input type="submit" value="Descargar">
         </div>
     </main>
 
@@ -124,6 +127,21 @@
                 
             </form>
         </div>
+    </aside>
+    <aside class="barra-edicion">
+        <h3>
+            TEXTO
+        </h3>
+        <form id="editor-texto">
+            <label>
+                SUPERIOR
+                <textarea name="" id="texto-superior" cols="20" rows="1,5">TOP TEXT</textarea>
+            </label>
+            <label>
+                INFERIOR
+                <textarea name="" id="texto-inferior" cols="20" rows="1,5">BOTTOM TEXT</textarea>
+            </label>
+        </form>
     </aside>
 
     <script src="script.js"></script>

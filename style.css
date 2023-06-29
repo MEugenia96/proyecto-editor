@@ -1,7 +1,7 @@
 
 body{
     margin: 0;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     background-color: #30343f;
 }
 
@@ -61,7 +61,8 @@ li{
 .barra-edicion{
     background-color: #252935;
     color: #ffffff;
-    width: 20vw;
+    width: 20vw; 
+    margin-right: 2%;  /*margen temporal*/ 
 }
 
 .barra-edicion h3{

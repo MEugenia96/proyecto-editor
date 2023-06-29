@@ -43,7 +43,7 @@
                 TOP TEXT
             </h2>
             <div class="contenedor-img">
-                <img src="" alt="">
+                <img src="" alt="" id="imagen-meme" class="imagen-edit">
             </div>
             <h2 class="campo-texto">
                 BOTTOM TEXT
@@ -60,63 +60,66 @@
             <form id="editor-imagen">
                 <label class="ubicacion-column">
                     URL
-                    <input id="" name="" type="text">
+                    <input id="url-imagen" name="" type="text" class="diseño-form">
                 </label>
-                <label>
-                    FONDO
-                    <input id="" name="" type="color">
-                </label>
-                <label>
-                    <select name="fondo" id="" form="editor-imagen">
-                        <option value="Ninguno">Ninguno</option>
-                        <option value="Aclarar">Aclarar</option>
-                        <option value="Oscurecer">Oscurecer</option>
-                        <option value="Diferencia">Diferencia</option>
-                        <option value="Luminosidad">Luminosidad</option>
-                        <option value="Multiplicar">Multiplicar</option>
-                    </select>
-                </label>
+
+                <p>FONDO</p>
+                <div class="ubicacion-row">
+                    <label>
+                        <input id="" name="" type="color" class="diseño-form">
+                    </label>
+                    <label>
+                        <select name="fondo" id="" form="editor-imagen" class="diseño-form">
+                            <option value="Ninguno">Ninguno</option>
+                            <option value="Aclarar">Aclarar</option>
+                            <option value="Oscurecer">Oscurecer</option>
+                            <option value="Diferencia">Diferencia</option>
+                            <option value="Luminosidad">Luminosidad</option>
+                            <option value="Multiplicar">Multiplicar</option>
+                        </select>
+                    </label>
+                </div>
                 <div class="contenedor-filtros">
                     <p>FILTROS</p>
                     <label>
                         BRILLO
-                        <input type="range">
+                        <input id="" name="" type="range">
                     </label>
                     <label>
                         OPACIDAD
-                        <input type="range">
+                        <input id="" name="" type="range">
                     </label>
                     <label>
                         CONTRASTE
-                        <input type="range">
+                        <input id="" name="" type="range">
                     </label>
                     <label>
                         DESENFOQUE
-                        <input type="range">
+                        <input id="" name="" type="range">
                     </label>
                     <label>
                         ESCALA DE GRISES
-                        <input type="range">
+                        <input id="" name="" type="range">
                     </label>
                     <label>
                         SEPIA
-                        <input type="range">
+                        <input id="" name="" type="range">
                     </label>
                     <label>
                         HUE
-                        <input type="range">
+                        <input id="" name="" type="range">
                     </label>
                     <label>
                         SATURADO
-                        <input type="range">
+                        <input id="" name="" type="range">
                     </label>
                     <label>
                         NEGATIVO
-                        <input type="range">
+                        <input id="" name="" type="range">
                     </label>
                 </div>
                 <label>
-                    <input type="submit" value="Reestablecer filtros">
+                    <input type="submit" value="Reestablecer filtros" class="diseño-form">
                 </label>
                 
             </form>

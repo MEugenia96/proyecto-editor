@@ -1,7 +1,7 @@
 
 body{
     margin: 0;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     background-color: #30343f;
 }
 
@@ -33,23 +33,24 @@ li{
 .lista-nav{
     justify-content: center;
     width: 80vw;
-    padding: 0;
-    margin: 0;
+    /* padding: 0;
+    margin: 0; */
 }
 
 .lista-nav li{
-    width: 120px;
+    width: 150px;
+    padding: 0% 2%;
 }
 
 .boton-nav{
     text-decoration: none;
     color: #ffffff;
-}
-
-.boton-nav p{
+    background-color: transparent;
+    border: none;
     font-size: 16px;
     justify-content: center;
 }
+
 
 .boton-nav i{
     margin-top: 5%;
@@ -58,18 +59,43 @@ li{
     font-size: 18px;
 }
 
-.barra-edicion{
+.edicion-img{
     background-color: #252935;
     color: #ffffff;
     width: 20vw; 
-    margin-right: 2%;  /*margen temporal*/ 
+    margin-left: auto;
 }
 
-.barra-edicion h3{
+.edicion-img h3{
     font-size: 16px;
     width: 100%;
     text-align: center;
     padding: 2%;
+}
+
+.edicion-texto{
+    background-color: #252935;
+    color: #ffffff;
+    width: 20vw; 
+    margin-left: auto;
+}
+
+.edicion-texto h3{
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+}
+
+.edicion-img h3{
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+}
+
+.hidden{
+    display: none;
 }
 
 .contenedor-memes{

@@ -32,3 +32,24 @@ const editarTexto2 = (e) =>{
     return bottomTextMeme.textContent = e.target.value;
 }
 textAreaInferior.addEventListener('input', (evento) => editarTexto2(evento))
+
+//Ocultar y mostrar editores
+
+const asideImagen = document.getElementById('aside-imagen')
+const asideTexto = document.getElementById('aside-texto')
+const botonImg = document.getElementById('boton-img')
+const botonText = document.getElementById('boton-text')
+
+const edicionTexto = (e) =>{
+    asideImagen.classList.add('hidden')
+    asideTexto.classList.remove('hidden')
+}
+
+botonText.addEventListener('click', (evento) => edicionTexto(evento))
+
+const edicionImagen = (e) =>{
+    asideTexto.classList.add('hidden')
+    asideImagen.classList.remove('hidden')
+}
+
+botonImg.addEventListener('click', (evento) => edicionImagen(evento))

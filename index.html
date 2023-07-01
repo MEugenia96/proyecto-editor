@@ -14,28 +14,21 @@
             <h1 class="titulo-proyecto ubicacion-row">
                 Generador de Memes
             </h1>
-            <nav>
-                <ul class="ubicacion-row lista-nav">
-                    <li>
-                        <a href="" class="boton-nav ubicacion-row">
-                            <i class="fa-regular fa-file-image"></i>
-                            <p>Imagen</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" class="boton-nav ubicacion-row">
-                            <i class="fa-solid fa-a"></i>
-                            <p>Texto</p> 
-                        </a>
-                    </li>
-                    <li>
-                        <a href="" class="boton-nav ubicacion-row">
-                            <i class="fa-regular fa-lightbulb"></i>
-                            <p>Modo oscuro</p>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+
+            <ul class="ubicacion-row lista-nav">
+                <li>
+                    <i class="fa-regular fa-file-image boton-nav"></i>
+                    <input type="button" value="Imagen" id="boton-img" class="boton-nav">
+                </li>
+                <li>
+                    <i class="fa-solid fa-a boton-nav"></i>
+                    <input type="button" value="Texto" id="boton-text" class="boton-nav">
+                </li>
+                <li>
+                    <i class="fa-regular fa-file-image boton-nav"></i>
+                    <input type="button" value="Modo oscuro" id="modo" class="boton-nav">
+                </li>
+            </ul>
         </div>
 
         <div class="ubicacion-column contenedor-memes">
@@ -54,7 +47,7 @@
         </div>
     </main>
 
-    <aside class="ubicacion-row barra-edicion">
+    <aside class="ubicacion-row edicion-img" id="aside-imagen">
         <div class="ubicacion-column">
             <h3>
                 IMAGEN
@@ -128,7 +121,7 @@
             </form>
         </div>
     </aside>
-    <aside class="barra-edicion">
+    <aside class="edicion-texto hidden" id="aside-texto">
         <h3>
             TEXTO
         </h3>

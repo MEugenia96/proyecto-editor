@@ -53,3 +53,6 @@ const edicionImagen = (e) =>{
 }
 
 botonImg.addEventListener('click', (evento) => edicionImagen(evento))
+
+
+

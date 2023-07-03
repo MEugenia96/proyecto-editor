@@ -32,13 +32,13 @@
         </div>
 
         <div class="ubicacion-column contenedor-memes">
-            <h2 class="campo-texto" id="top-text">
+            <h2 id="top-text">
                 TOP TEXT
             </h2>
-            <div class="contenedor-img">
-                <img src="" alt="" id="imagen-meme" class="imagen-edit">
+            <div class="contenedor-img sin-texto-sup1">
+                <img src="" alt="" id="imagen-meme" class="imagen-edit sin-texto-sup2">
             </div>
-            <h2 class="campo-texto" id="bottom-text">
+            <h2 id="bottom-text">
                 BOTTOM TEXT
             </h2>
         </div>
@@ -54,11 +54,9 @@
             </h3>
         
             <form id="editor-imagen">
-                <label class="ubicacion-column">
-                    URL
-                    <input id="url-imagen" name="" type="text" class="diseño-form">
-                </label>
-
+                <label for="url-imagen" class="ubicacion-column">URL</label>    
+                <input id="url-imagen" name="" type="text" class="diseño-form">
+                
                 <p>FONDO</p>
                 <div class="ubicacion-row">
                     <label>
@@ -125,15 +123,47 @@
         <h3>
             TEXTO
         </h3>
-        <form id="editor-texto">
-            <label>
-                SUPERIOR
-                <textarea name="" id="texto-superior" cols="20" rows="1,5">TOP TEXT</textarea>
-            </label>
-            <label>
-                INFERIOR
-                <textarea name="" id="texto-inferior" cols="20" rows="1,5">BOTTOM TEXT</textarea>
-            </label>
+        <form id="editor-texto" class="ubicacion-column form-texto">
+            <div>
+                <label for="texto-superior">SUPERIOR</label>
+                <textarea name="" id="texto-superior">TOP TEXT</textarea>
+                <label>
+                    <input type="checkbox" id="check-superior">Sin texto superior
+                </label>
+            </div>
+            <div>
+                <label for="texto-inferior">INFERIOR</label>
+                <textarea name="" id="texto-inferior">BOTTOM TEXT</textarea>
+                <label>
+                    <input type="checkbox" id="check-inferior">Sin texto inferior
+                </label>
+            </div>
+            <div class="ubicacion-column">
+                <label for="tipo-fuente">FUENTE</label>
+                <select name="" id="tipo-fuente">
+                    <option value="Arial">Arial</option>
+                    <option value="Arial Black">Arial Black</option>
+                    <option value="American Typewrite">American Typewrite</option>
+                    <option value="Andale Mono">Andale Mono</option>
+                    <option value="Comic Sans MS">Comic Sans MS</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Impact">Impact</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                </select>
+                <div class="ubicacion-row">
+                    <input type="number" class="tamaño-fuente">
+                    <button class="boton-alineado">
+                        <i class="fa-solid fa-align-left"> </i>
+                    </button>
+                    <button class="boton-alineado">
+                        <i class="fa-solid fa-align-center"></i>
+                    </button>
+                    <button class="boton-alineado">
+                        <i class="fa-solid fa-align-right"></i>
+                    </button>
+                </div>
+            </div>
         </form>
     </aside>
 

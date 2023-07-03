@@ -54,5 +54,33 @@ const edicionImagen = (e) =>{
 
 botonImg.addEventListener('click', (evento) => edicionImagen(evento))
 
+//Quitar texto superior
 
+const textoSuperior = document.getElementById('top-text')
+const inputSinTextoSup = document.getElementById('check-superior')
+const imagenMeme = document.getElementById('imagen-meme') 
+const contenedorImg = document.getElementsByClassName('contenedor-img')
+console.log(contenedorImg)
 
+const eliminarTextSup = (e) =>{
+    textoSuperior.classList.add('hidden')
+    imagenMeme.classList.add('sin-texto-sup2')
+    imagenMeme.classList.remove('imagen-edit')
+    contenedorImg[0].classList.remove('contenedor-img')
+}
+
+inputSinTextoSup.addEventListener('click', (evento) => eliminarTextSup(evento))
+
+//Quitar texto inferior
+
+const textoInferior = document.getElementById('bottom-text')
+const inputSinTextoInf = document.getElementById('check-inferior')
+
+const eliminarTextInf = (e) =>{
+    textoInferior.classList.add('hidden')
+    imagenMeme.classList.add('sin-texto-sup2')
+    imagenMeme.classList.remove('imagen-edit')
+    contenedorImg[0].classList.remove('contenedor-img')
+}
+
+inputSinTextoInf.addEventListener('click', (evento) => eliminarTextInf(evento))

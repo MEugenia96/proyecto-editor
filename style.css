@@ -1,12 +1,22 @@
 
 body{
     margin: 0;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     background-color: #30343f;
 }
 
 li{
     list-style: none;
+}
+
+.sin-texto-sup1{
+    width: 600px;
+    height: 500px;
+    background-color: black;
+}
+.sin-texto-sup2{
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -147,12 +157,40 @@ li{
     color: #ffffff;
 }
 
-input[type=text]{
-    width: 230px;
-    height: 25px;
-    border-radius: 10px;
-    margin: 5%;
+.form-texto div{
+    margin-bottom: 25px;
 }
+
+textarea, select{
+    width: 98%;
+    height: 30px;
+    background-color: #393e49;
+    color: #ffffff;
+}
+
+input[type=text]{
+    width: 100%;
+    height: 23px;
+    margin-left: 2%;
+}
+
+.tamaño-fuente{
+    width: 100px;
+    margin-top: 5%;
+    margin-left: auto;
+    height: 25px;
+    background-color: #393e49;
+    color: #ffffff;
+}
+.boton-alineado{
+    width: 30px;
+    margin-top: 5%;
+    margin-left: auto;
+    height: 30px;
+    background-color: #393e49;
+    color: #ffffff
+}
+
 
 @media (max-width:414px){
     #aside-imagen{

@@ -4,10 +4,16 @@
 const inputImagen = document.getElementById('url-imagen')
 const imagenElegida = document.getElementById('imagen-meme')
 
-
-const captarUrl = (e) => {
-    return imagenElegida.setAttribute('src', e.target.value)
+const captarUrl = (e) =>{
+    imagenElegida.style.backgroundImage = `url(${e.target.value})`
+    imagenElegida.style.backgroundSize = 'cover'
+    imagenElegida.style.backgroundRepeat = 'no-repeat'
+    imagenElegida.style.backgroundPosition = 'center'
+    // imagenElegida.style.backgroundPositionY ='50%'
 }
+// const captarUrl = (e) => {
+//     return imagenElegida.setAttribute('src', e.target.value)
+// }
 
 inputImagen.addEventListener('input', (evento) => captarUrl(evento))
 
@@ -60,7 +66,7 @@ const textoSuperior = document.getElementById('top-text')
 const inputSinTextoSup = document.getElementById('check-superior')
 const imagenMeme = document.getElementById('imagen-meme') 
 const contenedorImg = document.getElementsByClassName('contenedor-img')
-console.log(contenedorImg)
+
 
 const eliminarTextSup = (e) =>{
     textoSuperior.classList.add('hidden')
@@ -84,3 +90,16 @@ const eliminarTextInf = (e) =>{
 }
 
 inputSinTextoInf.addEventListener('click', (evento) => eliminarTextInf(evento))
+
+// Cambiar color fondo imagen (const = ImagenElegida)
+
+const inputColorFondo = document.getElementById('color-fondo')
+const imagenEditar = document.getElementById('imagen-meme')
+
+
+console.log(inputColorFondo.addEventListener('click', (evento) => colorFondo (evento)))
+
+
+
+
+

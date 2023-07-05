@@ -9,14 +9,10 @@ li{
     list-style: none;
 }
 
-.sin-texto-sup1{
-    width: 600px;
-    height: 500px;
-    background-color: black;
-}
-.sin-texto-sup2{
+.sin-texto{
     width: 100%;
-    height: 100%;
+    height: 90%;
+    background-color: black;
 }
 
 
@@ -111,22 +107,32 @@ li{
 
 .contenedor-memes{
     width: 600px;
-    height: 650px;
-    background-color: #ffffff;
+    height: 620px;
     margin-top: 0;
-    margin-left: 25%;
+    margin: auto;
     align-items: center;
+    background-color: #ffffff;
 }
 
-.contenedor-memes h2{
-    padding: 3%;
-    font-size: 30px;
-}
 
 .contenedor-img{
     width: 100%;
-    height: 400px;
+    height: 80%;
     background-color: black;
+}
+
+.campo-texto1{
+    width: 100%;
+    height: 10%;
+    font-size: 30px;
+    text-align: center;
+
+}
+.campo-texto2{
+    width: 100%;
+    height: 10%;
+    font-size: 30px;
+    text-align: center;
 }
 
 .descargar-meme{
@@ -142,10 +148,10 @@ li{
     justify-content: center;
 }
 
-.imagen-edit{
+/* .imagen-edit{
     width: 100%;
     height: 100%;
-}
+} */
 
 .contenedor-filtros label{
     display: flex;
@@ -267,4 +273,3 @@ input[type=text]{
         margin-top: 20%;
     }
 }
-

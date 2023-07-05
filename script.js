@@ -65,41 +65,48 @@ botonImg.addEventListener('click', (evento) => edicionImagen(evento))
 const textoSuperior = document.getElementById('top-text')
 const inputSinTextoSup = document.getElementById('check-superior')
 const imagenMeme = document.getElementById('imagen-meme') 
-const contenedorImg = document.getElementsByClassName('contenedor-img')
 
 
 const eliminarTextSup = (e) =>{
-    textoSuperior.classList.add('hidden')
-    imagenMeme.classList.add('sin-texto-sup2')
-    imagenMeme.classList.remove('imagen-edit')
-    contenedorImg[0].classList.remove('contenedor-img')
+    if(inputSinTextoSup.checked == true){
+        textoSuperior.classList.add('hidden')
+        imagenMeme.classList.add('sin-texto')
+    }else if(inputSinTextoSup.checked == false){
+        textoSuperior.classList.remove('hidden')
+        imagenMeme.classList.remove('sin-texto')
+    }
 }
 
-inputSinTextoSup.addEventListener('click', (evento) => eliminarTextSup(evento))
+inputSinTextoSup.addEventListener('change', (evento) => eliminarTextSup(evento))
 
 //Quitar texto inferior
 
 const textoInferior = document.getElementById('bottom-text')
 const inputSinTextoInf = document.getElementById('check-inferior')
 
+
 const eliminarTextInf = (e) =>{
-    textoInferior.classList.add('hidden')
-    imagenMeme.classList.add('sin-texto-sup2')
-    imagenMeme.classList.remove('imagen-edit')
-    contenedorImg[0].classList.remove('contenedor-img')
+    if(inputSinTextoInf.checked == true){
+        textoInferior.classList.add('hidden')
+        imagenMeme.classList.add('sin-texto')
+    }else if(inputSinTextoInf.checked == false){
+        textoInferior.classList.remove('hidden')
+        imagenMeme.classList.remove('sin-texto')
+    }
 }
 
-inputSinTextoInf.addEventListener('click', (evento) => eliminarTextInf(evento))
+inputSinTextoInf.addEventListener('change', (evento) => eliminarTextInf(evento))
 
-// Cambiar color fondo imagen (const = ImagenElegida)
+// Cambiar color de texto (topTextMeme-bottomTextMeme)
 
-const inputColorFondo = document.getElementById('color-fondo')
-const imagenEditar = document.getElementById('imagen-meme')
+const inputColorTexto = document.getElementById('color-texto')
 
+inputColorTexto.addEventListener('input', (evento) => captarColorTexto (evento))
 
-console.log(inputColorFondo.addEventListener('click', (evento) => colorFondo (evento)))
-
-
+const captarColorTexto = (e) =>{
+    topTextMeme.style.color = (e.target.value)
+    bottomTextMeme.style.color = (e.target.value)
+}
 
 
 

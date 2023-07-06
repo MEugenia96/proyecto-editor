@@ -9,43 +9,45 @@
     <script src="https://kit.fontawesome.com/51e25768ff.js" crossorigin="anonymous"></script>
 </head>
 <body class="ubicacion-row">
-    <main>
-        <div class="seccion-botones ubicacion-column">
-            <h1 class="titulo-proyecto ubicacion-row">
-                Generador de Memes
-            </h1>
+    <div class="ubicacion-column">
+        <header class="seccion-botones ubicacion-row">
+            <div class="ubicacion-column">
+                <h1 class="titulo-proyecto ubicacion-row">
+                    Generador de Memes
+                </h1>
 
-            <ul class="ubicacion-row lista-nav">
-                <li>
-                    <i class="fa-regular fa-file-image boton-nav"></i>
-                    <input type="button" value="Imagen" id="boton-img" class="boton-nav">
-                </li>
-                <li>
-                    <i class="fa-solid fa-a boton-nav"></i>
-                    <input type="button" value="Texto" id="boton-text" class="boton-nav">
-                </li>
-                <li>
-                    <i class="fa-regular fa-file-image boton-nav"></i>
-                    <input type="button" value="Modo oscuro" id="modo" class="boton-nav">
-                </li>
-            </ul>
-        </div>
-
-        <div id="contenedor-meme" class="ubicacion-column contenedor-memes">
-            <h2 id="top-text" class="campo-texto1">
-                TOP TEXT
-            </h2>
-            <div class="contenedor-img sin-texto" id="imagen-meme">
-                <!-- <img src="" alt="" id="imagen-meme" class="imagen-edit sin-texto-sup2"> -->
+                <ul class="ubicacion-row lista-nav">
+                    <li>
+                        <i class="fa-regular fa-file-image boton-nav"></i>
+                        <input type="button" value="Imagen" id="boton-img" class="boton-nav">
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-a boton-nav"></i>
+                        <input type="button" value="Texto" id="boton-text" class="boton-nav">
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-file-image boton-nav"></i>
+                        <input type="button" value="Modo oscuro" id="modo" class="boton-nav">
+                    </li>
+                </ul>
             </div>
-            <h2 id="bottom-text" class="campo-texto2">
-                BOTTOM TEXT
-            </h2>
+        </header>
+        <main class="main-contenedor ubicacion-row">
+        <div id="contenedor-memes" class="ubicacion-column contenedor-memes">
+            <div id="top-text" class="campo-texto">
+                    TOP TEXT
+            </div>
+            <div class="contenedor-img" id="imagen-meme"></div>
+            <div id="bottom-text" class="campo-texto">
+                    BOTTOM TEXT
+            </div>
         </div>
-        <div class="boton-descarga">
+        <!-- <div class="boton-descarga ubicacion-column">
             <input type="submit" value="Descargar meme" class="descargar-meme">
-        </div>
-    </main>
+        </div> -->
+        
+        </main>
+    </div>
 
     <aside class="ubicacion-row edicion-img" id="aside-imagen">
         <div class="ubicacion-column">
@@ -141,15 +143,16 @@
             <div class="ubicacion-column">
                 <label for="tipo-fuente">FUENTE</label>
                 <select name="" id="tipo-fuente">
-                    <option value="Arial">Arial</option>
+                    <option selected disabled>Elija una fuente</option>
+                    <option value="Arial, Helvetica, sans-serif">Arial</option>
                     <option value="Arial Black">Arial Black</option>
                     <option value="American Typewrite">American Typewrite</option>
                     <option value="Andale Mono">Andale Mono</option>
                     <option value="Comic Sans MS">Comic Sans MS</option>
                     <option value="Helvetica">Helvetica</option>
-                    <option value="Impact">Impact</option>
-                    <option value="Verdana">Verdana</option>
-                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif">Impact</option>
+                    <option value="Verdana, Geneva, Tahoma, sans-serif">Verdana</option>
+                    <option value="Times New Roman, Times, serif">Times New Roman</option>
                 </select>
                 <div class="ubicacion-row">
                     <input type="number" class="tamaño-fuente">

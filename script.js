@@ -70,10 +70,10 @@ const imagenMeme = document.getElementById('imagen-meme')
 const eliminarTextSup = (e) =>{
     if(inputSinTextoSup.checked == true){
         textoSuperior.classList.add('hidden')
-        imagenMeme.classList.add('sin-texto')
+        // imagenMeme.classList.add('sin-texto')
     }else if(inputSinTextoSup.checked == false){
         textoSuperior.classList.remove('hidden')
-        imagenMeme.classList.remove('sin-texto')
+        // imagenMeme.classList.remove('sin-texto')
     }
 }
 
@@ -88,14 +88,26 @@ const inputSinTextoInf = document.getElementById('check-inferior')
 const eliminarTextInf = (e) =>{
     if(inputSinTextoInf.checked == true){
         textoInferior.classList.add('hidden')
-        imagenMeme.classList.add('sin-texto')
     }else if(inputSinTextoInf.checked == false){
         textoInferior.classList.remove('hidden')
-        imagenMeme.classList.remove('sin-texto')
     }
 }
 
 inputSinTextoInf.addEventListener('change', (evento) => eliminarTextInf(evento))
+
+// Eliminar ambos textos
+
+inputSinTextoSup.addEventListener('change', (evento) => eliminarAmbosTextos(evento))
+inputSinTextoInf.addEventListener('change', (evento) => eliminarAmbosTextos(evento))
+
+const eliminarAmbosTextos = (e) =>{
+    if(inputSinTextoSup.checked == true && inputSinTextoInf.checked == true){
+        textoSuperior.classList.add('hidden')
+        textoInferior.classList.add('hidden')
+        imagenMeme.classList.remove('contenedor-img')
+        imagenMeme.classList.add('sin-texto')
+    }
+}
 
 // Cambiar color de texto (topTextMeme-bottomTextMeme)
 
@@ -108,5 +120,15 @@ const captarColorTexto = (e) =>{
     bottomTextMeme.style.color = (e.target.value)
 }
 
+// Cambiar estilo de fuente 
 
+
+const selectorFuente = document.getElementById('tipo-fuente')
+
+selectorFuente.addEventListener('change', () => cambioFuente())
+
+const cambioFuente = () =>{
+    textoSuperior.style.fontFamily = `${selectorFuente.value}`
+    textoInferior.style.fontFamily = `${selectorFuente.value}`
+}
 

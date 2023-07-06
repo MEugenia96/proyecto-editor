@@ -16,7 +16,7 @@ li{
 }
 
 
-.seccion-botones{
+.disenio-header{
     background-color: #191e2b;
     color: #ffffff;
     width: 80vw;
@@ -38,83 +38,56 @@ li{
     margin: 0;
 }
 
-.lista-nav{
+.panel-botones{
     justify-content: center;
     width: 80vw;
-    /* padding: 0;
-    margin: 0; */
-}
+} 
 
-.lista-nav li{
-    width: 150px;
-    padding: 0% 2%;
-}
 
 .boton-nav{
+    width: 200px;
     text-decoration: none;
     background-color: transparent;
     border: none;
     font-size: 16px;
-    justify-content: center;
     color: #ffffff;
 }
 
 
-.boton-nav i{
+.iconos{
     margin-top: 5%;
     padding: 5%;
     align-content: center;
     font-size: 18px;
 }
 
-.edicion-img{
+.disenio-aside{
     background-color: #252935;
     color: #ffffff;
     width: 20vw; 
     margin-left: auto;
 }
 
-.edicion-img h3{
-    font-size: 16px;
+.disenio-aside h3{
+    font-size: 20px;
     width: 100%;
     text-align: center;
     padding: 2%;
 }
 
-.edicion-texto{
-    background-color: #252935;
-    color: #ffffff;
-    width: 20vw; 
-    margin-left: auto;
-}
-
-.edicion-texto h3{
-    font-size: 16px;
-    width: 100%;
-    text-align: center;
-    padding: 2%;
-}
-
-.edicion-img h3{
-    font-size: 16px;
-    width: 100%;
-    text-align: center;
-    padding: 2%;
-}
 
 .hidden{
     display: none;
 }
 
-.main-contenedor{
+.disenio-main{
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 .contenedor-memes{
     width: 600px;
     height: 620px;
     margin-top: 0;
-    /* margin: auto; */
     align-items: center;
     background-color: #ffffff;
 }
@@ -138,28 +111,25 @@ li{
     background-color: #ffffff;
 }
 
-.descargar-meme{
+
+.boton-descarga{
+    margin: 5%;
+    display: flex;
+    justify-content: center;
     background-color: green;
     color: #ffffff;
     font-size: 18px;
     padding: 1%;
 }
 
-.boton-descarga{
-    margin: 5%;
-    display: flex;
-    justify-content: center;
-}
-
-/* .imagen-edit{
-    width: 100%;
-    height: 100%;
-} */
-
 .contenedor-filtros label{
     display: flex;
     flex-direction: column;
     margin: 5%;
+}
+
+.boton-reset{
+    margin-top: 10%;
 }
 
 .diseño-form{
@@ -183,6 +153,7 @@ input[type=text]{
     height: 23px;
     margin-left: 2%;
 }
+
 
 .tamaño-fuente{
     width: 100px;

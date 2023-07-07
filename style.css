@@ -27,6 +27,7 @@ body{
     color: #610a64;
     width: 20vw; 
     margin-left: auto;
+    padding: 2%;
 }
 
 .input-claro{
@@ -34,6 +35,10 @@ body{
     color: #610a64;
 }
 /* _______________ */
+
+.transparente{
+    background-color: transparent;
+}
 
 .disenio-header{
     background-color: #191e2b;
@@ -84,6 +89,7 @@ body{
     color: #ffffff;
     width: 20vw; 
     margin-left: auto;
+    padding: 2%;
 }
 
 h3{
@@ -141,11 +147,14 @@ h3{
     padding: 1%;
 }
 
-.contenedor-filtros label{
+.contenedor-filtros{
+    width: 13vw;
+}
+
+/* .contenedor-filtros label{
     display: flex;
     flex-direction: column;
-    margin: 5%;
-}
+} */
 
 .boton-reset{
     margin-top: 10%;
@@ -189,6 +198,19 @@ input[type=text]{
     color: #ffffff
 }
 
+.input-color{
+    height: 30px;
+    width: 40px;
+    background-color: transparent;
+    border: none;
+}
+
+.input-color::-webkit-color-swatch-wrapper, .input-color::-webkit-color-swatch{
+    height: 25px;
+    width: 30px;
+    border-radius: 100%;
+    border: none;
+}
 
 @media (max-width:414px){
     #aside-imagen{

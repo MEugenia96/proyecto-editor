@@ -57,10 +57,8 @@
             </div>
 
             <aside class="ubicacion-row disenio-aside" id="aside-imagen">
-                <div class="ubicacion-column">
-                    <h3>IMAGEN</h3>
-
-                    <form id="editor-imagen">
+                    <form id="editor-imagen" class="ubicacion-column">
+                        <h3>IMAGEN</h3>
 
                         <label for="url-imagen" class="ubicacion-column">
                             <h4>URL</h4> 
@@ -69,8 +67,9 @@
 
                         <h4>FONDO</h4>
                         <div class="ubicacion-row">
-                            <label>
-                                <input type="color" id="color-fondo" name="" class="diseño-form"/>
+                            <label class="ubicacion-row">
+                                <input type="color" id="color-fondo" name="" class="input-color"/>
+                                <span id="valor-color"> #000000 </span>
                             </label>
 
                             <label>
@@ -85,7 +84,7 @@
                             </label>
                         </div>
 
-                        <div class="contenedor-filtros">
+                        <div class="contenedor-filtros ubicacion-column">
                             <h4>FILTROS</h4>
 
                             <label for="img-brillo">Brillo</label>
@@ -114,7 +113,6 @@
                             
                             <label for="img-negativo">Negativo</label>
                             <input id="img-negativo" name="" type="range" />
-                        </div>
 
                         <button type="reset" class="boton-reset">Reestablecer filtros</button>
 
@@ -191,13 +189,26 @@
                             </button>
                         </div>
 
-                        <div>
-                            <label for="color-texto">COLOR</label>
-                            <input type="color" id="color-texto" />
+                        <div class="ubicacion-row">
+                            <label for="color-texto" class="ubicacion-column">COLOR
+                                <div class="ubicacion-row">
+                                    <input type="color" id="color-texto" class="input-color"/>
+                                    <span id="valor-color1"> #000000 </span>
+                                </div>
+                            </label>
 
-                            <label for="color-fondo">FONDO</label>
-                            <input type="color" id="color-fondo" />
+                            <label for="color-campo-texto" class="ubicacion-column">FONDO
+                                <div class="ubicacion-row">
+                                    <input type="color" id="color-campo-texto" class="input-color"/>
+                                    <span id="valor-color2"> #000000 </span>
+                                </div>
+                            </label>
                         </div>
+                        <label>
+                            <input type="checkbox" id="check-transparente" />
+                            Fondo transparente
+                        </label>
+
                     </div>
                 </form>
             </aside>

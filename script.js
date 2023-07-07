@@ -1,21 +1,36 @@
 
+//------------------------ASIDE IMAGEN---------------------------//
+
 // Ingreso de la imagen
 
 const inputImagen = document.getElementById('url-imagen')
 const imagenElegida = document.getElementById('imagen-meme')
+
 
 const captarUrl = (e) =>{
     imagenElegida.style.backgroundImage = `url(${e.target.value})`
     imagenElegida.style.backgroundSize = 'cover'
     imagenElegida.style.backgroundRepeat = 'no-repeat'
     imagenElegida.style.backgroundPosition = 'center'
-    // imagenElegida.style.backgroundPositionY ='50%'
 }
-// const captarUrl = (e) => {
-//     return imagenElegida.setAttribute('src', e.target.value)
-// }
 
 inputImagen.addEventListener('input', (evento) => captarUrl(evento))
+
+// Input color fondo imagen 
+
+const inputColorImagen = document.getElementById('color-fondo')
+const valorColor = document.getElementById('valor-color')
+
+const insertarValorColor = () =>{
+    valorColor.innerHTML = `${inputColorImagen.value}`
+}
+
+inputColorImagen.addEventListener('input', () => insertarValorColor())
+inputColorImagen.addEventListener('input', () => colorFondoImagen())
+
+const colorFondoImagen = () =>{
+    imagenElegida.style.backgroundColor = `${inputColorImagen.value}`
+}
 
 
 // Ingreso del texto superior
@@ -120,6 +135,13 @@ const captarColorTexto = (e) =>{
     bottomTextMeme.style.color = (e.target.value)
 }
 
+const valorColor1 = document.getElementById('valor-color1')
+inputColorTexto.addEventListener('input', () => valorColorTexto())
+
+const valorColorTexto = () =>{
+    valorColor1.innerHTML = `${inputColorTexto.value}`
+}
+
 // Cambiar estilo de fuente 
 
 
@@ -132,6 +154,34 @@ const cambioFuente = () =>{
     textoInferior.style.fontFamily = `${selectorFuente.value}`
 }
 
+// Color campo texto
+const inputColorCampo = document.getElementById('color-campo-texto')
+console.log(inputColorCampo.value)
+const valorColor3 = document.getElementById('valor-color2')
+
+inputColorCampo.addEventListener('input', () => valorColorCampo())
+
+const valorColorCampo = () =>{
+    valorColor3.innerHTML = `${inputColorCampo.value}`
+}
+
+inputColorCampo.addEventListener('input', () => captarColorCampo())
+const captarColorCampo = () =>{
+    topTextMeme.style.backgroundColor = `${inputColorCampo.value}`
+    bottomTextMeme.style.backgroundColor = `${inputColorCampo.value}`
+}
+
+// Checked transparente (TERMINAR)
+const checkTransparente = document.getElementById('check-transparente')
+
+checkTransparente.addEventListener('change', (e) => campoTransparente(e))
+
+const campoTransparente = (e) =>{
+    if(checkTransparente.checked == true){
+        topTextMeme.style.backgroundColor = 'transparent'
+}
+}
+
 // Cambio de modo
 
 const cambioHeader = document.getElementById('contenedor-header')
@@ -140,7 +190,7 @@ const cambioMain = document.getElementById('contenedor-main')
 // const asideImagen = document.getElementById('aside-imagen')
 // const asideTexto = document.getElementById('aside-texto')
 const formImagen = document.getElementById('editor-imagen')
-console.log(formImagen)
+
 
 inputModo.addEventListener('click', (evento) => cambioModo (evento))
 

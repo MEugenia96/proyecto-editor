@@ -132,3 +132,26 @@ const cambioFuente = () =>{
     textoInferior.style.fontFamily = `${selectorFuente.value}`
 }
 
+// Cambio de modo
+
+const cambioHeader = document.getElementById('contenedor-header')
+const inputModo = document.getElementById('modo')
+const cambioMain = document.getElementById('contenedor-main')
+// const asideImagen = document.getElementById('aside-imagen')
+// const asideTexto = document.getElementById('aside-texto')
+const formImagen = document.getElementById('editor-imagen')
+console.log(formImagen)
+
+inputModo.addEventListener('click', (evento) => cambioModo (evento))
+
+const cambioModo = (e) =>{
+    cambioHeader.classList.toggle('disenio-header')
+    cambioHeader.classList.toggle('header-claro')
+    cambioMain.classList.toggle('disenio-main')
+    cambioMain.classList.toggle('main-claro')
+    asideImagen.classList.toggle('disenio-aside')
+    asideImagen.classList.toggle('aside-claro')
+    asideTexto.classList.toggle('disenio-aside')
+    asideTexto.classList.toggle('aside-claro')
+}
+

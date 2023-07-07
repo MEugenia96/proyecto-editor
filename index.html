@@ -6,15 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <link rel="stylesheet" href="style.css" />
-        <script
-            src="https://kit.fontawesome.com/51e25768ff.js"
-            crossorigin="anonymous"
-        ></script>
+
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+        <script src="https://kit.fontawesome.com/51e25768ff.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="ubicacion-row">
             <div class="ubicacion-column">
-                <header class="disenio-header ubicacion-column">
+                <header id="contenedor-header" class="disenio-header ubicacion-column">
                     <h1 class="titulo-proyecto ubicacion-row">
                         Generador de Memes
                     </h1>
@@ -30,12 +31,12 @@
                         </button>
                         <button type="button" id="modo" class="boton-nav ubicacion-row">
                             <i class="fa-regular fa-lightbulb iconos"></i>
-                            <p>Modo oscuro</p> 
+                            <p>Modo claro</p> 
                         </button>
                     </div>
                 </header>
 
-                <main class="disenio-main ubicacion-column">
+                <main id="contenedor-main"class="disenio-main ubicacion-column">
                     <div id="contenedor-memes" class="ubicacion-column contenedor-memes">
                         <div id="top-text" class="campo-texto">
                             TOP TEXT
@@ -47,8 +48,8 @@
                             BOTTOM TEXT
                         </div>
                     </div>
-
-                    <button type="button" class="boton-descarga" id="">
+                    
+                    <button id="descarga" type="button" class="boton-descarga">
                         <i class="fa-solid fa-download iconos"></i>
                         Descargar meme
                     </button>
@@ -126,7 +127,7 @@
                 <form id="editor-texto" class="ubicacion-column form-texto">
                     <div>
                         <label for="texto-superior">SUPERIOR</label>
-                        <textarea name="" id="texto-superior">TOP TEXT</textarea>
+                        <textarea name="" id="texto-superior" class="diseño-form">TOP TEXT</textarea>
                         <label>
                             <input type="checkbox" id="check-superior" />Sin
                             texto superior
@@ -134,7 +135,7 @@
                     </div>
                     <div>
                         <label for="texto-inferior">INFERIOR</label>
-                        <textarea name="" id="texto-inferior">BOTTOM TEXT</textarea>
+                        <textarea name="" id="texto-inferior" class="diseño-form">BOTTOM TEXT</textarea>
                         <label>
                             <input type="checkbox" id="check-inferior" />Sin
                             texto inferior
@@ -142,7 +143,7 @@
                     </div>
                     <div class="ubicacion-column">
                         <label for="tipo-fuente">FUENTE</label>
-                        <select name="" id="tipo-fuente">
+                        <select name="" id="tipo-fuente" class="diseño-form">
                             <option selected disabled>
                                 Elija una fuente
                             </option>
@@ -176,7 +177,7 @@
                             </option>
                         </select>
 
-                        <div class="ubicacion-row">
+                        <div class="ubicacion-row" class="diseño-form">
                             <input type="number" class="tamaño-fuente"/>
 
                             <button class="boton-alineado">

@@ -1,12 +1,6 @@
 
 body{
     margin: 0;
-    /* overflow-x: hidden; */
-    background-color: #30343f;
-}
-
-li{
-    list-style: none;
 }
 
 .sin-texto{
@@ -15,6 +9,31 @@ li{
     background-color: black;
 }
 
+/* modo claro */
+.header-claro{
+    background-color: #b26fb4;
+    color: #ffffff;
+    width: 80vw;
+}
+
+.main-claro{
+    background-color: #f7daf8;
+    display: flex;
+    align-items: center;
+}
+
+.aside-claro{
+    background-color: #e7b4e9;
+    color: #610a64;
+    width: 20vw; 
+    margin-left: auto;
+}
+
+.input-claro{
+    background-color: #e7b4e9;
+    color: #610a64;
+}
+/* _______________ */
 
 .disenio-header{
     background-color: #191e2b;
@@ -43,7 +62,6 @@ li{
     width: 80vw;
 } 
 
-
 .boton-nav{
     width: 200px;
     text-decoration: none;
@@ -68,7 +86,7 @@ li{
     margin-left: auto;
 }
 
-.disenio-aside h3{
+h3{
     font-size: 20px;
     width: 100%;
     text-align: center;
@@ -83,6 +101,7 @@ li{
 .disenio-main{
     display: flex;
     align-items: center;
+    background-color: #30343f;
 }
 .contenedor-memes{
     width: 600px;
@@ -144,8 +163,6 @@ li{
 textarea, select{
     width: 98%;
     height: 30px;
-    background-color: #393e49;
-    color: #ffffff;
 }
 
 input[type=text]{

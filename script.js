@@ -156,7 +156,6 @@ const cambioFuente = () =>{
 
 // Color campo texto
 const inputColorCampo = document.getElementById('color-campo-texto')
-console.log(inputColorCampo.value)
 const valorColor3 = document.getElementById('valor-color2')
 
 inputColorCampo.addEventListener('input', () => valorColorCampo())
@@ -171,16 +170,25 @@ const captarColorCampo = () =>{
     bottomTextMeme.style.backgroundColor = `${inputColorCampo.value}`
 }
 
-// Checked transparente (TERMINAR)
+// Checked transparente (CORREGIR)
 const checkTransparente = document.getElementById('check-transparente')
+const contenidoDiv1 = topTextMeme.textContent //hacer variable
+const claseTexto = document.getElementsByClassName('texto')
+const clase = claseTexto[0]
+
 
 checkTransparente.addEventListener('change', (e) => campoTransparente(e))
 
 const campoTransparente = (e) =>{
     if(checkTransparente.checked == true){
-        topTextMeme.style.backgroundColor = 'transparent'
+        topTextMeme.classList.add('hidden')
+        const crearDiv = document.createElement("div")
+        crearDiv.textContent = contenidoDiv1
+        crearDiv.setAttribute('id', 'top-text2')
+        imagenElegida.innerHTML = crearDiv.textContent
+    }
 }
-}
+
 
 // Cambio de modo
 
@@ -204,4 +212,41 @@ const cambioModo = (e) =>{
     asideTexto.classList.toggle('disenio-aside')
     asideTexto.classList.toggle('aside-claro')
 }
+
+// Descargar meme
+const contenedorMeme = document.getElementById('contenedor-memes')
+const botonDescarga = document.getElementById('descarga')
+
+botonDescarga.addEventListener('click', () => descargarMeme())
+
+const descargarMeme = () =>{
+    domtoimage.toBlob(contenedorMeme).then(function (blob) {
+        window.saveAs(blob, "meme.png");
+    })
+};
+
+// Filtros imagen
+const brillo = document.getElementById('img-brillo')
+const opacidad = document.getElementById('img-opacidad')
+const contraste = document.getElementById('img-contraste')
+const desenfoque = document.getElementById('img-desenfoque')
+const grises = document.getElementById('img-grises')
+const sepia = document.getElementById('img-sepia')
+const hue = document.getElementById('img-hue')
+const saturado = document.getElementById('img-saturado')
+const negativo = document.getElementById('img-negativo')
+
+const filtros = () =>{
+    imagenElegida.style.filter = `brightness(${brillo.value}) opacity(${opacidad.value}) contrast(${contraste.value}%) blur(${desenfoque.value}px) grayscale(${grises.value}%) sepia(${sepia.value}%) hue-rotate(${hue.value}deg) saturate(${saturado.value}%) invert(${negativo.value})`;
+}
+
+brillo.addEventListener('input', () => filtros())
+opacidad.addEventListener('input', () => filtros())
+contraste.addEventListener('input', () => filtros())
+desenfoque.addEventListener('input', () => filtros())
+grises.addEventListener('input', () => filtros())
+sepia.addEventListener('input', () => filtros())
+hue.addEventListener('input', () => filtros())
+saturado.addEventListener('input', () => filtros())
+negativo.addEventListener('input', () => filtros())
 

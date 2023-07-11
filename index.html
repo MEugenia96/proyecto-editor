@@ -6,10 +6,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <link rel="stylesheet" href="style.css" />
-
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-
+        <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+        integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+        ></script>
+        <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+        integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+        ></script>
         <script src="https://kit.fontawesome.com/51e25768ff.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -38,13 +46,13 @@
 
                 <main id="contenedor-main"class="disenio-main ubicacion-column">
                     <div id="contenedor-memes" class="ubicacion-column contenedor-memes">
-                        <div id="top-text" class="campo-texto">
+                        <div id="top-text" class="campo-texto texto">
                             TOP TEXT
                         </div>
 
                         <div class="contenedor-img" id="imagen-meme"></div>
 
-                        <div id="bottom-text" class="campo-texto">
+                        <div id="bottom-text" class="campo-texto texto">
                             BOTTOM TEXT
                         </div>
                     </div>
@@ -88,31 +96,31 @@
                             <h4>FILTROS</h4>
 
                             <label for="img-brillo">Brillo</label>
-                            <input id="img-brillo" name="" type="range"/>
+                            <input id="img-brillo" type="range" min="0" max="1" value="1" step="0.1"/>
                             
                             <label for="img-opacidad">Opacidad</label>
-                            <input id="img-opacidad" name="" type="range"/>
+                            <input id="img-opacidad" type="range" min="0" max="1" value="1" step="0.1"/>
                             
                             <label for="img-contraste">Contraste</label>
-                            <input id="img-contraste" name="" type="range"/>
+                            <input id="img-contraste" type="range" min="100" max="1000" value="100" step="1"/>
                             
                             <label for="img-desenfoque">Desenfoque</label>
-                            <input id="img-desenfoque" name="" type="range"/>
+                            <input id="img-desenfoque" type="range" min="0" max="10" value="0" step="0.1"/>
                             
                             <label for="img-grises">Escala de grises</label>
-                            <input id="img-grises" name="" type="range"/>
+                            <input id="img-grises" type="range" min="0" max="100" value="0" step="1"/>
                             
                             <label for="img-sepia">Sepia</label>
-                            <input id="img-sepia" name="" type="range"/>
+                            <input id="img-sepia" type="range" min="0" max="100" value="0" step="1"/>
                             
                             <label for="img-hue">HUE</label>
-                            <input id="img-hue" name="" type="range"/>
+                            <input id="img-hue" type="range" min="0" max="359" value="0" step="1"/>
                             
                             <label for="img-saturado">Saturado</label>
-                            <input id="img-saturado" name="" type="range"/>
+                            <input id="img-saturado" type="range" min="100" max="1000" value="100" step="10"/>
                             
                             <label for="img-negativo">Negativo</label>
-                            <input id="img-negativo" name="" type="range" />
+                            <input id="img-negativo" type="range" min="0" max="1" value="1" step="0.1"/>
 
                         <button type="reset" class="boton-reset">Reestablecer filtros</button>
 

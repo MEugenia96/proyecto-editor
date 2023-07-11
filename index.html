@@ -46,15 +46,15 @@
 
                 <main id="contenedor-main"class="disenio-main ubicacion-column">
                     <div id="contenedor-memes" class="ubicacion-column contenedor-memes">
-                        <div id="top-text" class="campo-texto texto">
+                        <p id="top-text" class="campo-texto texto">
                             TOP TEXT
-                        </div>
+                        </p>
 
                         <div class="contenedor-img" id="imagen-meme"></div>
 
-                        <div id="bottom-text" class="campo-texto texto">
+                        <p id="bottom-text" class="campo-texto texto">
                             BOTTOM TEXT
-                        </div>
+                        </p>
                     </div>
                     
                     <button id="descarga" type="button" class="boton-descarga">
@@ -120,9 +120,9 @@
                             <input id="img-saturado" type="range" min="100" max="1000" value="100" step="10"/>
                             
                             <label for="img-negativo">Negativo</label>
-                            <input id="img-negativo" type="range" min="0" max="1" value="1" step="0.1"/>
+                            <input id="img-negativo" type="range" min="0" max="1" value="0" step="0.1"/>
 
-                        <button type="reset" class="boton-reset">Reestablecer filtros</button>
+                        <button type="reset" class="boton-reset" id="boton-reset">Reestablecer filtros</button>
 
                     </form>
                 </div>

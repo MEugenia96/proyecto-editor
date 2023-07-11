@@ -1,5 +1,4 @@
 
-//------------------------ASIDE IMAGEN---------------------------//
 
 // Ingreso de la imagen
 
@@ -144,7 +143,6 @@ const valorColorTexto = () =>{
 
 // Cambiar estilo de fuente 
 
-
 const selectorFuente = document.getElementById('tipo-fuente')
 
 selectorFuente.addEventListener('change', () => cambioFuente())
@@ -170,22 +168,27 @@ const captarColorCampo = () =>{
     bottomTextMeme.style.backgroundColor = `${inputColorCampo.value}`
 }
 
-// Checked transparente (CORREGIR)
+// Checked transparente 
 const checkTransparente = document.getElementById('check-transparente')
-const contenidoDiv1 = topTextMeme.textContent //hacer variable
-const claseTexto = document.getElementsByClassName('texto')
-const clase = claseTexto[0]
+console.log(topTextMeme)
 
+checkTransparente.addEventListener('change', () => campoTransparente())
 
-checkTransparente.addEventListener('change', (e) => campoTransparente(e))
-
-const campoTransparente = (e) =>{
+const campoTransparente = () =>{
     if(checkTransparente.checked == true){
-        topTextMeme.classList.add('hidden')
-        const crearDiv = document.createElement("div")
-        crearDiv.textContent = contenidoDiv1
-        crearDiv.setAttribute('id', 'top-text2')
-        imagenElegida.innerHTML = crearDiv.textContent
+        topTextMeme.classList.remove('campo-texto')
+        topTextMeme.classList.add('transparente-top')
+        bottomTextMeme.classList.remove('campo-texto')
+        bottomTextMeme.classList.add('transparente-bottom')
+        imagenElegida.style.height  = '100%'
+        imagenElegida.classList.add('sin-texto')
+    }
+    else if(checkTransparente.checked == false){
+        topTextMeme.classList.remove('transparente-top')
+        imagenElegida.classList.remove('sin-texto')
+        topTextMeme.classList.add('campo-texto')
+        bottomTextMeme.classList.remove('transparente-bottom')
+        bottomTextMeme.classList.add('campo-texto')
     }
 }
 
@@ -195,8 +198,6 @@ const campoTransparente = (e) =>{
 const cambioHeader = document.getElementById('contenedor-header')
 const inputModo = document.getElementById('modo')
 const cambioMain = document.getElementById('contenedor-main')
-// const asideImagen = document.getElementById('aside-imagen')
-// const asideTexto = document.getElementById('aside-texto')
 const formImagen = document.getElementById('editor-imagen')
 
 

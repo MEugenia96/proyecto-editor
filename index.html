@@ -69,11 +69,12 @@
                         <h3>IMAGEN</h3>
 
                         <label for="url-imagen" class="ubicacion-column">
-                            <h4>URL</h4> 
+                            URL 
+                            <input type="text" id="url-imagen" name="" class="diseño-form" placeholder="Ingrese su url"/>
                         </label>
-                        <input type="text" id="url-imagen" name="" class="diseño-form" placeholder="Ingrese su url"/>
+                        
 
-                        <h4>FONDO</h4>
+                        <p>FONDO</p>
                         <div class="ubicacion-row espaciado-elementos">
                             <label class="ubicacion-row cuadro-color" id="etiquetas-color">
                                 <input type="color" id="color-fondo" name="" class="input-color"/>
@@ -93,7 +94,7 @@
                         </div>
 
                         <div class="contenedor-filtros ubicacion-column">
-                            <h4>FILTROS</h4>
+                            <p>FILTROS</p>
 
                             <label for="img-brillo">Brillo</label>
                             <input id="img-brillo" type="range" min="0" max="1" value="1" step="0.1"/>
@@ -133,7 +134,7 @@
                 <form id="editor-texto" class="ubicacion-column form-texto">
                     <div>
                         <label for="texto-superior">SUPERIOR</label>
-                        <textarea name="" id="texto-superior" class="diseño-form">TOP TEXT</textarea>
+                        <textarea name="" id="texto-superior" class="diseño-form" maxlength="30">TOP TEXT</textarea>
                         <label>
                             <input type="checkbox" id="check-superior" />Sin
                             texto superior
@@ -141,7 +142,7 @@
                     </div>
                     <div>
                         <label for="texto-inferior">INFERIOR</label>
-                        <textarea name="" id="texto-inferior" class="diseño-form">BOTTOM TEXT</textarea>
+                        <textarea name="" id="texto-inferior" class="diseño-form" maxlength="30">BOTTOM TEXT</textarea>
                         <label>
                             <input type="checkbox" id="check-inferior" />Sin
                             texto inferior
@@ -186,13 +187,13 @@
                         <div class="ubicacion-row" class="diseño-form">
                             <input type="number" class="tamaño-fuente input-fuente" id="tamaño-fuente"/>
 
-                            <button class="boton-alineado color-alineado" id="boton-left">
+                            <button type="button" class="boton-alineado color-alineado" id="boton-left">
                                 <i class="fa-solid fa-align-left"> </i>
                             </button>
-                            <button class="boton-alineado color-alineado" id="boton-center">
+                            <button type="button" class="boton-alineado color-alineado" id="boton-center">
                                 <i class="fa-solid fa-align-center"></i>
                             </button>
-                            <button class="boton-alineado color-alineado" id="boton-right">
+                            <button type="button" class="boton-alineado color-alineado" id="boton-right">
                                 <i class="fa-solid fa-align-right"></i>
                             </button>
                         </div>

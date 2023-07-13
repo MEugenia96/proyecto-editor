@@ -248,8 +248,6 @@ const cambioModo = (e) =>{
 
 
 
-
-
 // Descargar meme
 const contenedorMeme = document.getElementById('contenedor-memes')
 const botonDescarga = document.getElementById('descarga')
@@ -287,3 +285,32 @@ hue.addEventListener('input', () => filtros())
 saturado.addEventListener('input', () => filtros())
 negativo.addEventListener('input', () => filtros())
 
+// Alineado del texto
+
+botonLeft.addEventListener('click', () => alineacionIzq())
+botonCenter.addEventListener('click', () => alineacionCenter())
+botonRight.addEventListener('click', () => alineacionDer())
+
+const alineacionIzq = () =>{
+    topTextMeme.style.textAlign = 'start'
+    bottomTextMeme.style.textAlign = 'start'
+}
+
+const alineacionCenter = () =>{
+    topTextMeme.style.textAlign = 'center'
+    bottomTextMeme.style.textAlign = 'center'
+}
+
+const alineacionDer = () =>{
+    topTextMeme.style.textAlign = 'end'
+    bottomTextMeme.style.textAlign = 'end'
+}
+
+// Tamaño fuente
+
+tamanioFuente.addEventListener('input', (evento) => cambioTamanio(evento))
+
+
+const cambioTamanio = (e) =>{
+    topTextMeme.style.fontSize = `${e.target.value}`
+}

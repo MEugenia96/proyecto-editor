@@ -118,8 +118,8 @@ const eliminarAmbosTextos = (e) =>{
     if(inputSinTextoSup.checked == true && inputSinTextoInf.checked == true){
         textoSuperior.classList.add('hidden')
         textoInferior.classList.add('hidden')
-        imagenMeme.classList.remove('contenedor-img')
-        imagenMeme.classList.add('sin-texto')
+        // imagenMeme.classList.remove('contenedor-img')
+        // imagenMeme.classList.add('sin-texto')
     }
 }
 
@@ -170,7 +170,6 @@ const captarColorCampo = () =>{
 
 // Checked transparente 
 const checkTransparente = document.getElementById('check-transparente')
-console.log(topTextMeme)
 
 checkTransparente.addEventListener('change', () => campoTransparente())
 
@@ -181,17 +180,16 @@ const campoTransparente = () =>{
         bottomTextMeme.classList.remove('campo-texto')
         bottomTextMeme.classList.add('transparente-bottom')
         imagenElegida.style.height  = '100%'
-        imagenElegida.classList.add('sin-texto')
+        // imagenElegida.classList.add('sin-texto')
     }
     else if(checkTransparente.checked == false){
         topTextMeme.classList.remove('transparente-top')
-        imagenElegida.classList.remove('sin-texto')
+        // imagenElegida.classList.remove('sin-texto')
         topTextMeme.classList.add('campo-texto')
         bottomTextMeme.classList.remove('transparente-bottom')
         bottomTextMeme.classList.add('campo-texto')
     }
 }
-
 
 // Cambio de modo
 
@@ -199,20 +197,58 @@ const cambioHeader = document.getElementById('contenedor-header')
 const inputModo = document.getElementById('modo')
 const cambioMain = document.getElementById('contenedor-main')
 const formImagen = document.getElementById('editor-imagen')
+const selectFondo = document.getElementById('select-fondo')
+const etiquetasColor = document.getElementById('etiquetas-color')
+const etiquetasColor1 = document.getElementById('etiquetas-color1')
+const etiquetasColor2 = document.getElementById('etiquetas-color2')
+const tamanioFuente = document.getElementById('tamaño-fuente')
+const botonLeft = document.getElementById('boton-left')
+const botonCenter = document.getElementById('boton-center')
+const botonRight = document.getElementById('boton-right')
+
 
 
 inputModo.addEventListener('click', (evento) => cambioModo (evento))
 
+
 const cambioModo = (e) =>{
-    cambioHeader.classList.toggle('disenio-header')
-    cambioHeader.classList.toggle('header-claro')
-    cambioMain.classList.toggle('disenio-main')
-    cambioMain.classList.toggle('main-claro')
-    asideImagen.classList.toggle('disenio-aside')
-    asideImagen.classList.toggle('aside-claro')
-    asideTexto.classList.toggle('disenio-aside')
-    asideTexto.classList.toggle('aside-claro')
+    cambioHeader.classList.toggle('disenio-header');
+    cambioHeader.classList.toggle('header-claro');
+    cambioMain.classList.toggle('disenio-main');
+    cambioMain.classList.toggle('main-claro');
+    asideImagen.classList.toggle('disenio-aside');
+    asideImagen.classList.toggle('aside-claro');
+    asideTexto.classList.toggle('disenio-aside');
+    asideTexto.classList.toggle('aside-claro');
+    inputImagen.classList.toggle('diseño-form');
+    inputImagen.classList.toggle('input-claro');
+    textAreaInferior.classList.toggle('diseño-form');
+    textAreaInferior.classList.toggle('input-claro');
+    textAreaSuperior.classList.toggle('diseño-form');
+    textAreaSuperior.classList.toggle('input-claro');
+    selectFondo.classList.toggle('diseño-form');
+    selectFondo.classList.toggle('input-claro');
+    selectorFuente.classList.toggle('diseño-form');
+    selectorFuente.classList.toggle('input-claro');
+    etiquetasColor.classList.toggle('cuadro-color');
+    etiquetasColor.classList.toggle('input-claro');
+    etiquetasColor1.classList.toggle('cuadro-color');
+    etiquetasColor1.classList.toggle('input-claro');
+    etiquetasColor2.classList.toggle('cuadro-color');
+    etiquetasColor2.classList.toggle('input-claro');
+    tamanioFuente.classList.toggle('input-fuente');
+    tamanioFuente.classList.toggle('input-claro');
+    botonLeft.classList.toggle('color-alineado');
+    botonLeft.classList.toggle('input-claro');
+    botonCenter.classList.toggle('color-alineado');
+    botonCenter.classList.toggle('input-claro');
+    botonRight.classList.toggle('color-alineado');
+    botonRight.classList.toggle('input-claro');
 }
+
+
+
+
 
 // Descargar meme
 const contenedorMeme = document.getElementById('contenedor-memes')

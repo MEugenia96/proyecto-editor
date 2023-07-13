@@ -71,17 +71,17 @@
                         <label for="url-imagen" class="ubicacion-column">
                             <h4>URL</h4> 
                         </label>
-                        <input type="text" id="url-imagen" name="" class="diseño-form"/>
+                        <input type="text" id="url-imagen" name="" class="diseño-form" placeholder="Ingrese su url"/>
 
                         <h4>FONDO</h4>
-                        <div class="ubicacion-row">
-                            <label class="ubicacion-row">
+                        <div class="ubicacion-row espaciado-elementos">
+                            <label class="ubicacion-row cuadro-color" id="etiquetas-color">
                                 <input type="color" id="color-fondo" name="" class="input-color"/>
                                 <span id="valor-color"> #000000 </span>
                             </label>
 
                             <label>
-                                <select name="fondo" id="" form="editor-imagen" class="diseño-form">
+                                <select name="fondo" id="select-fondo" form="editor-imagen" class="diseño-form">
                                     <option value="Ninguno">Ninguno</option>
                                     <option value="Aclarar">Aclarar</option>
                                     <option value="Oscurecer">Oscurecer</option>
@@ -184,29 +184,29 @@
                         </select>
 
                         <div class="ubicacion-row" class="diseño-form">
-                            <input type="number" class="tamaño-fuente"/>
+                            <input type="number" class="tamaño-fuente input-fuente" id="tamaño-fuente"/>
 
-                            <button class="boton-alineado">
+                            <button class="boton-alineado color-alineado" id="boton-left">
                                 <i class="fa-solid fa-align-left"> </i>
                             </button>
-                            <button class="boton-alineado">
+                            <button class="boton-alineado color-alineado" id="boton-center">
                                 <i class="fa-solid fa-align-center"></i>
                             </button>
-                            <button class="boton-alineado">
+                            <button class="boton-alineado color-alineado" id="boton-right">
                                 <i class="fa-solid fa-align-right"></i>
                             </button>
                         </div>
 
                         <div class="ubicacion-row">
                             <label for="color-texto" class="ubicacion-column">COLOR
-                                <div class="ubicacion-row">
+                                <div class="ubicacion-row cuadro-color" id="etiquetas-color1">
                                     <input type="color" id="color-texto" class="input-color"/>
                                     <span id="valor-color1"> #000000 </span>
                                 </div>
                             </label>
 
                             <label for="color-campo-texto" class="ubicacion-column">FONDO
-                                <div class="ubicacion-row">
+                                <div class="ubicacion-row cuadro-color" id="etiquetas-color2">
                                     <input type="color" id="color-campo-texto" class="input-color"/>
                                     <span id="valor-color2"> #000000 </span>
                                 </div>

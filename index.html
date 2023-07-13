@@ -39,7 +39,7 @@
                         </button>
                         <button type="button" id="modo" class="boton-nav ubicacion-row">
                             <i class="fa-regular fa-lightbulb iconos"></i>
-                            <p>Modo claro</p> 
+                            <p id="texto-modo">Modo claro</p> 
                         </button>
                     </div>
                 </header>
@@ -151,8 +151,8 @@
                     <div class="ubicacion-column">
                         <label for="tipo-fuente">FUENTE</label>
                         <select name="" id="tipo-fuente" class="diseño-form">
-                            <option selected disabled>
-                                Elija una fuente
+                            <option value="Times New Roman, Times, serif" selected>
+                                Times New Roman
                             </option>
                             <option value="Arial, Helvetica, sans-serif">
                                 Arial
@@ -160,11 +160,11 @@
                             <option value="Arial Black">
                                 Arial Black
                             </option>
-                            <option value="American Typewrite">
-                                American Typewrite
+                            <option value="Lucida Sans, Lucida Sans Regular">
+                                Lucida Sans
                             </option>
-                            <option value="Andale Mono">
-                                Andale Mono
+                            <option value="Courier New, Courier, monospace">
+                                Courier New
                             </option>
                             <option value="Comic Sans MS">
                                 Comic Sans MS
@@ -179,13 +179,10 @@
                             <option value="Verdana, Geneva, Tahoma, sans-serif">
                                 Verdana
                             </option>
-                            <option value="Times New Roman, Times, serif">
-                                Times New Roman
-                            </option>
                         </select>
 
                         <div class="ubicacion-row" class="diseño-form">
-                            <input type="number" class="tamaño-fuente input-fuente" id="tamaño-fuente"/>
+                            <input type="number" min="16" max="50" step="2" value="30"class="tamaño-fuente input-fuente" id="tamaño-fuente"/>
 
                             <button type="button" class="boton-alineado color-alineado" id="boton-left">
                                 <i class="fa-solid fa-align-left"> </i>

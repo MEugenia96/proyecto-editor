@@ -209,6 +209,7 @@ const botonRight = document.getElementById('boton-right')
 
 
 inputModo.addEventListener('click', (evento) => cambioModo (evento))
+inputModo.addEventListener('click', (evento) => textModo (evento))
 
 
 const cambioModo = (e) =>{
@@ -246,6 +247,15 @@ const cambioModo = (e) =>{
     botonRight.classList.toggle('input-claro');
 }
 
+const textoModo = document.getElementById('texto-modo')
+
+const textModo = () =>{
+    if (cambioHeader.classList.contains('disenio-header')){
+        textoModo.innerText = "Modo claro"
+        }else if (cambioHeader.classList.contains('header-claro')){
+        textoModo.innerText = "Modo oscuro"
+        }
+    }
 
 
 // Descargar meme
@@ -308,9 +318,12 @@ const alineacionDer = () =>{
 
 // Tamaño fuente
 
-tamanioFuente.addEventListener('input', (evento) => cambioTamanio(evento))
+tamanioFuente.addEventListener('input', () => cambioTamanio())
 
+console.log(tamanioFuente.value)
 
-const cambioTamanio = (e) =>{
-    topTextMeme.style.fontSize = `${e.target.value}`
+const cambioTamanio = () =>{
+    const tamanio = tamanioFuente.value;
+    topTextMeme.style.fontSize = tamanio + `px`;
+    bottomTextMeme.style.fontSize = tamanio + `px`;
 }

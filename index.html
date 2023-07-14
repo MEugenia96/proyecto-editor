@@ -68,15 +68,16 @@
                     <form id="editor-imagen" class="ubicacion-column">
                         <h3>IMAGEN</h3>
 
-                        <label for="url-imagen" class="ubicacion-column">
+                        <label for="url-imagen" class="ubicacion-column espaciado-secciones">
                             URL 
-                            <input type="text" id="url-imagen" name="" class="diseño-form" placeholder="Ingrese su url"/>
+                            <input type="text" id="url-imagen" name="" class="diseño-form input-espaciado" placeholder="Ingrese su url"/>
                         </label>
                         
-
-                        <p>FONDO</p>
-                        <div class="ubicacion-row espaciado-elementos">
-                            <label class="ubicacion-row cuadro-color" id="etiquetas-color">
+                        <p class="subtitulos">
+                            FONDO
+                        </p>
+                        <div class="ubicacion-row espaciado-secciones">
+                            <label class="ubicacion-row cuadro-color espaciado-row" id="etiquetas-color">
                                 <input type="color" id="color-fondo" name="" class="input-color"/>
                                 <span id="valor-color"> #000000 </span>
                             </label>
@@ -121,9 +122,9 @@
                             <input id="img-saturado" type="range" min="100" max="1000" value="100" step="10"/>
                             
                             <label for="img-negativo">Negativo</label>
-                            <input id="img-negativo" type="range" min="0" max="1" value="0" step="0.1"/>
+                            <input id="img-negativo" class="espaciado-secciones" type="range" min="0" max="1" value="0" step="0.1"/>
 
-                        <button type="reset" class="boton-reset" id="boton-reset">Reestablecer filtros</button>
+                        <button type="reset" class="boton-reset diseño-form" id="boton-reset">Reestablecer filtros</button>
 
                     </form>
                 </div>
@@ -132,7 +133,7 @@
             <aside class="disenio-aside hidden" id="aside-texto">
                 <h3>TEXTO</h3>
                 <form id="editor-texto" class="ubicacion-column form-texto">
-                    <div>
+                    <div class="espaciado-secciones">
                         <label for="texto-superior">SUPERIOR</label>
                         <textarea name="" id="texto-superior" class="diseño-form" maxlength="30">TOP TEXT</textarea>
                         <label>
@@ -140,7 +141,7 @@
                             texto superior
                         </label>
                     </div>
-                    <div>
+                    <div class="espaciado-secciones">
                         <label for="texto-inferior">INFERIOR</label>
                         <textarea name="" id="texto-inferior" class="diseño-form" maxlength="30">BOTTOM TEXT</textarea>
                         <label>
@@ -182,21 +183,21 @@
                         </select>
 
                         <div class="ubicacion-row" class="diseño-form">
-                            <input type="number" min="16" max="50" step="2" value="30"class="tamaño-fuente input-fuente" id="tamaño-fuente"/>
+                            <input type="number" min="16" max="50" step="2" value="30"class="tamaño-fuente input-fuente  espaciado-secciones" id="tamaño-fuente"/>
 
-                            <button type="button" class="boton-alineado color-alineado" id="boton-left">
+                            <button type="button" class="boton-alineado color-alineado espaciado-secciones" id="boton-left">
                                 <i class="fa-solid fa-align-left"> </i>
                             </button>
-                            <button type="button" class="boton-alineado color-alineado" id="boton-center">
+                            <button type="button" class="boton-alineado color-alineado espaciado-secciones" id="boton-center">
                                 <i class="fa-solid fa-align-center"></i>
                             </button>
-                            <button type="button" class="boton-alineado color-alineado" id="boton-right">
+                            <button type="button" class="boton-alineado color-alineado espaciado-secciones" id="boton-right">
                                 <i class="fa-solid fa-align-right"></i>
                             </button>
                         </div>
 
                         <div class="ubicacion-row">
-                            <label for="color-texto" class="ubicacion-column">COLOR
+                            <label for="color-texto" class="ubicacion-column espaciado-row">COLOR
                                 <div class="ubicacion-row cuadro-color" id="etiquetas-color1">
                                     <input type="color" id="color-texto" class="input-color"/>
                                     <span id="valor-color1"> #000000 </span>
@@ -210,12 +211,38 @@
                                 </div>
                             </label>
                         </div>
-                        <label>
-                            <input type="checkbox" id="check-transparente" />
-                            Fondo transparente
-                        </label>
-
                     </div>
+
+                    <label for="check-transparente" class="espaciado-secciones">
+                        <input type="checkbox" id="check-transparente"/>
+                        Fondo transparente
+                    </label>
+
+                    <p class="subtitulos">
+                        CONTORNO
+                    </p>
+                    <div class="ubicacion-row espaciado-secciones">
+                        <button id="contorno1" type="button" class="boton-contorno color-alineado">
+                            Ninguno
+                        </button>
+                        <button id="contorno2" type="button" class="boton-contorno color-alineado">
+                            Claro
+                        </button>
+                        <button id="contorno3" type="button" class="boton-contorno color-alineado">
+                            Oscuro
+                        </button>
+                    </div>
+
+                    <label for="input-espaciado"> ESPACIADO </label>
+                    <input type="number" id="input-espaciado" class="espaciado-secciones diseño-form input-espaciado">
+
+                    <label for="select-interlineado">INTERLINEADO</label>
+                    <select name="" id="select-interlineado" class="diseño-form">
+                        <option value="">1</option>
+                        <option value="">1.5</option>
+                        <option value="">2</option>
+                        <option value="">2.5</option>
+                    </select>
                 </form>
             </aside>
         </div>

@@ -36,6 +36,10 @@ body{
     border: 0.5px ridge #610a64;
 }
 
+.boton-claro{
+    background-color: #b26fb4;
+    color:#610a64;
+}
 
 /* _______________ */
 
@@ -155,13 +159,20 @@ h3{
 
 
 .boton-descarga{
+    width: 200px;
+    height: 50px;
     margin: 5%;
-    display: flex;
     justify-content: center;
-    background-color: green;
+    background-color: #610a64;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 16px;
     padding: 1%;
+    border-radius: 5%;
+}
+
+.boton-descarga i{
+    margin-bottom: 10%;
+    margin:auto;
 }
 
 .contenedor-filtros{
@@ -175,15 +186,13 @@ h3{
 
 .boton-reset{
     margin-top: 10%;
+    padding: 3%;
+    border-radius: 5px;
 }
 
 .diseño-form{
     background-color: #393e49;
     color: #ffffff;
-}
-
-.form-texto div{
-    margin-bottom: 25px;
 }
 
 textarea, select{
@@ -208,12 +217,14 @@ input[type=text]{
     margin-top: 5%;
     margin-left: auto;
     height: 25px;
+    border: 0.5px ridge #676e7e;
 }
 .boton-alineado{
     width: 30px;
     margin-top: 5%;
     margin-left: auto;
     height: 30px;
+    border: 0.5px ridge #676e7e;
 }
 
 .color-alineado{
@@ -221,9 +232,8 @@ input[type=text]{
     color: #ffffff
 }
 
-.espaciado-elementos{
-    justify-content: space-between;
-    margin-right: 5px;
+.espaciado-secciones{
+    margin-bottom: 10%;
 }
 
 #color-fondo{
@@ -256,6 +266,26 @@ input[type=text]{
     border: none;
 }
 
+.subtitulos{
+    margin: 0;
+}
+
+.boton-contorno{
+    margin: 2%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0.5px ridge #676e7e;
+}
+
+.input-espaciado{
+    height: 25px;
+    border-radius: 5px;
+    border: 0.5px ridge #676e7e;
+}
+
+.espaciado-row{
+    margin-right: 15px;
+}
 
 @media (max-width:414px){
     #aside-imagen{

@@ -205,7 +205,12 @@ const tamanioFuente = document.getElementById('tamaño-fuente')
 const botonLeft = document.getElementById('boton-left')
 const botonCenter = document.getElementById('boton-center')
 const botonRight = document.getElementById('boton-right')
-
+const botonContorno1 = document.getElementById('contorno1')
+const botonContorno2 = document.getElementById('contorno2')
+const botonContorno3 = document.getElementById('contorno3')
+const inputEspaciado = document.getElementById('input-espaciado')
+const selectInterlineado = document.getElementById('select-interlineado')
+const botonReset = document.getElementById('boton-reset')
 
 
 inputModo.addEventListener('click', (evento) => cambioModo (evento))
@@ -245,6 +250,18 @@ const cambioModo = (e) =>{
     botonCenter.classList.toggle('input-claro');
     botonRight.classList.toggle('color-alineado');
     botonRight.classList.toggle('input-claro');
+    botonContorno1.classList.toggle('color-alineado');
+    botonContorno2.classList.toggle('color-alineado');
+    botonContorno3.classList.toggle('color-alineado');
+    botonContorno1.classList.toggle('input-claro');
+    botonContorno2.classList.toggle('input-claro');
+    botonContorno3.classList.toggle('input-claro');
+    inputEspaciado.classList.toggle('diseño-form');
+    inputEspaciado.classList.toggle('input-claro');
+    selectInterlineado.classList.toggle('diseño-form');
+    selectInterlineado.classList.toggle('input-claro');
+    botonReset.classList.toggle('diseño-form');
+    botonReset.classList.toggle('boton-claro');
 }
 
 const textoModo = document.getElementById('texto-modo')

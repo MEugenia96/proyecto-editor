@@ -3,11 +3,11 @@ body{
     margin: 0;
 }
 
-.sin-texto{
+/* .sin-texto{
     width: 100%;
     height: 100%;
     background-color: black;
-}
+} */
 
 /* modo claro */
 .header-claro{
@@ -41,6 +41,16 @@ body{
     color:#610a64;
 }
 
+.contorno-oscuro{
+    text-shadow: -1px -1px 2px #000, 1px 1px 2px #000, -1px 1px 2px #000, 1px -1px 2px #000;
+    -webkit-text-stroke: 2px black;
+}
+
+.contorno-claro{
+    text-shadow: -1px -1px 2px #ffffff, 1px 1px 2px #ffffff, -1px 1px 2px #ffffff, 1px -1px 2px #ffffff;
+    -webkit-text-stroke: 2px white;
+}
+
 /* _______________ */
 
 .transparente-top{
@@ -52,7 +62,7 @@ body{
 
 .transparente-bottom{
     position: absolute;
-    bottom: 3rem;
+    bottom: 1rem;
     background-color: transparent;
     padding: 0px;
 }
@@ -85,11 +95,11 @@ body{
 } 
 
 .boton-nav{
-    width: 200px;
+    width: 100px;
     text-decoration: none;
     background-color: transparent;
     border: none;
-    font-size: 16px;
+    font-size: 13px;
     color: #ffffff;
 }
 
@@ -109,8 +119,16 @@ body{
     padding: 2%;
 }
 
+.disenio-aside label {
+    font-size: 14px;
+}
+
+.disenio-aside p {
+    font-size: 14px;
+}
+
 h3{
-    font-size: 20px;
+    font-size: 18px;
     width: 100%;
     text-align: center;
     padding: 2%;
@@ -275,6 +293,10 @@ input[type=text]{
     padding: 10px;
     border-radius: 5px;
     border: 0.5px ridge #676e7e;
+}
+
+.boton-contorno.active{
+    background-color: #610a64;
 }
 
 .input-espaciado{

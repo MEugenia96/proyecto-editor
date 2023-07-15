@@ -152,6 +152,27 @@ const cambioFuente = () =>{
     textoInferior.style.fontFamily = `${selectorFuente.value}`
 }
 
+// Aplicar contorno al texto
+
+
+const btnContornoClaro = document.getElementById('contorno2')
+const btnContornoOscuro = document.getElementById('contorno3')
+
+
+btnContornoOscuro.addEventListener('click', () => contornoOscuro())
+btnContornoClaro.addEventListener('click', () => contornoClaro())
+
+
+const contornoOscuro = () =>{
+    contenedorMeme.classList.toggle('contorno-oscuro')
+    btnContornoOscuro.classList.toggle('active')
+}
+
+const contornoClaro = () =>{
+    contenedorMeme.classList.toggle('contorno-claro')
+    btnContornoClaro.classList.toggle('active')
+}
+
 // Color campo texto
 const inputColorCampo = document.getElementById('color-campo-texto')
 const valorColor3 = document.getElementById('valor-color2')
@@ -180,11 +201,9 @@ const campoTransparente = () =>{
         bottomTextMeme.classList.remove('campo-texto')
         bottomTextMeme.classList.add('transparente-bottom')
         imagenElegida.style.height  = '100%'
-        // imagenElegida.classList.add('sin-texto')
     }
     else if(checkTransparente.checked == false){
         topTextMeme.classList.remove('transparente-top')
-        // imagenElegida.classList.remove('sin-texto')
         topTextMeme.classList.add('campo-texto')
         bottomTextMeme.classList.remove('transparente-bottom')
         bottomTextMeme.classList.add('campo-texto')
@@ -298,6 +317,7 @@ const hue = document.getElementById('img-hue')
 const saturado = document.getElementById('img-saturado')
 const negativo = document.getElementById('img-negativo')
 
+
 const filtros = () =>{
     imagenElegida.style.filter = `brightness(${brillo.value}) opacity(${opacidad.value}) contrast(${contraste.value}%) blur(${desenfoque.value}px) grayscale(${grises.value}%) sepia(${sepia.value}%) hue-rotate(${hue.value}deg) saturate(${saturado.value}%) invert(${negativo.value})`;
 }
@@ -311,6 +331,7 @@ sepia.addEventListener('input', () => filtros())
 hue.addEventListener('input', () => filtros())
 saturado.addEventListener('input', () => filtros())
 negativo.addEventListener('input', () => filtros())
+
 
 // Alineado del texto
 
@@ -333,11 +354,10 @@ const alineacionDer = () =>{
     bottomTextMeme.style.textAlign = 'end'
 }
 
+
 // Tamaño fuente
 
 tamanioFuente.addEventListener('input', () => cambioTamanio())
-
-console.log(tamanioFuente.value)
 
 const cambioTamanio = () =>{
     const tamanio = tamanioFuente.value;

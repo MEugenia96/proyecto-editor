@@ -1,10 +1,7 @@
 
-
 // Ingreso de la imagen
-
 const inputImagen = document.getElementById('url-imagen')
 const imagenElegida = document.getElementById('imagen-meme')
-
 
 const captarUrl = (e) =>{
     imagenElegida.style.backgroundImage = `url(${e.target.value})`
@@ -12,28 +9,22 @@ const captarUrl = (e) =>{
     imagenElegida.style.backgroundRepeat = 'no-repeat'
     imagenElegida.style.backgroundPosition = 'center'
 }
-
 inputImagen.addEventListener('input', (evento) => captarUrl(evento))
 
 // Input color fondo imagen 
-
 const inputColorImagen = document.getElementById('color-fondo')
 const valorColor = document.getElementById('valor-color')
-
 const insertarValorColor = () =>{
     valorColor.innerHTML = `${inputColorImagen.value}`
 }
 
 inputColorImagen.addEventListener('input', () => insertarValorColor())
 inputColorImagen.addEventListener('input', () => colorFondoImagen())
-
 const colorFondoImagen = () =>{
     imagenElegida.style.backgroundColor = `${inputColorImagen.value}`
 }
 
-
 // Ingreso del texto superior
-
 const textAreaSuperior = document.getElementById('texto-superior')
 const topTextMeme = document.getElementById('top-text')
 
@@ -44,7 +35,6 @@ textAreaSuperior.addEventListener('input', (evento) => editarTexto(evento))
 
 
 // Ingreso texto inferior
-
 const textAreaInferior = document.getElementById('texto-inferior')
 const bottomTextMeme = document.getElementById('bottom-text')
 
@@ -54,7 +44,6 @@ const editarTexto2 = (e) =>{
 textAreaInferior.addEventListener('input', (evento) => editarTexto2(evento))
 
 //Ocultar y mostrar editores
-
 const asideImagen = document.getElementById('aside-imagen')
 const asideTexto = document.getElementById('aside-texto')
 const botonImg = document.getElementById('boton-img')
@@ -64,22 +53,18 @@ const edicionTexto = (e) =>{
     asideImagen.classList.add('hidden')
     asideTexto.classList.remove('hidden')
 }
-
 botonText.addEventListener('click', (evento) => edicionTexto(evento))
 
 const edicionImagen = (e) =>{
     asideTexto.classList.add('hidden')
     asideImagen.classList.remove('hidden')
 }
-
 botonImg.addEventListener('click', (evento) => edicionImagen(evento))
 
 //Quitar texto superior
-
 const textoSuperior = document.getElementById('top-text')
 const inputSinTextoSup = document.getElementById('check-superior')
 const imagenMeme = document.getElementById('imagen-meme') 
-
 
 const eliminarTextSup = (e) =>{
     if(inputSinTextoSup.checked == true){
@@ -90,14 +75,11 @@ const eliminarTextSup = (e) =>{
         // imagenMeme.classList.remove('sin-texto')
     }
 }
-
 inputSinTextoSup.addEventListener('change', (evento) => eliminarTextSup(evento))
 
 //Quitar texto inferior
-
 const textoInferior = document.getElementById('bottom-text')
 const inputSinTextoInf = document.getElementById('check-inferior')
-
 
 const eliminarTextInf = (e) =>{
     if(inputSinTextoInf.checked == true){
@@ -106,11 +88,9 @@ const eliminarTextInf = (e) =>{
         textoInferior.classList.remove('hidden')
     }
 }
-
 inputSinTextoInf.addEventListener('change', (evento) => eliminarTextInf(evento))
 
 // Eliminar ambos textos
-
 inputSinTextoSup.addEventListener('change', (evento) => eliminarAmbosTextos(evento))
 inputSinTextoInf.addEventListener('change', (evento) => eliminarAmbosTextos(evento))
 
@@ -124,50 +104,40 @@ const eliminarAmbosTextos = (e) =>{
 }
 
 // Cambiar color de texto (topTextMeme-bottomTextMeme)
-
 const inputColorTexto = document.getElementById('color-texto')
 
 inputColorTexto.addEventListener('input', (evento) => captarColorTexto (evento))
-
 const captarColorTexto = (e) =>{
     topTextMeme.style.color = (e.target.value)
     bottomTextMeme.style.color = (e.target.value)
 }
 
 const valorColor1 = document.getElementById('valor-color1')
-inputColorTexto.addEventListener('input', () => valorColorTexto())
 
+inputColorTexto.addEventListener('input', () => valorColorTexto())
 const valorColorTexto = () =>{
     valorColor1.innerHTML = `${inputColorTexto.value}`
 }
 
 // Cambiar estilo de fuente 
-
 const selectorFuente = document.getElementById('tipo-fuente')
 
 selectorFuente.addEventListener('change', () => cambioFuente())
-
 const cambioFuente = () =>{
     textoSuperior.style.fontFamily = `${selectorFuente.value}`
     textoInferior.style.fontFamily = `${selectorFuente.value}`
 }
 
 // Aplicar contorno al texto
-
-
 const btnContornoClaro = document.getElementById('contorno2')
 const btnContornoOscuro = document.getElementById('contorno3')
 
-
 btnContornoOscuro.addEventListener('click', () => contornoOscuro())
 btnContornoClaro.addEventListener('click', () => contornoClaro())
-
-
 const contornoOscuro = () =>{
     contenedorMeme.classList.toggle('contorno-oscuro')
     btnContornoOscuro.classList.toggle('active')
 }
-
 const contornoClaro = () =>{
     contenedorMeme.classList.toggle('contorno-claro')
     btnContornoClaro.classList.toggle('active')
@@ -178,7 +148,6 @@ const inputColorCampo = document.getElementById('color-campo-texto')
 const valorColor3 = document.getElementById('valor-color2')
 
 inputColorCampo.addEventListener('input', () => valorColorCampo())
-
 const valorColorCampo = () =>{
     valorColor3.innerHTML = `${inputColorCampo.value}`
 }
@@ -193,7 +162,6 @@ const captarColorCampo = () =>{
 const checkTransparente = document.getElementById('check-transparente')
 
 checkTransparente.addEventListener('change', () => campoTransparente())
-
 const campoTransparente = () =>{
     if(checkTransparente.checked == true){
         topTextMeme.classList.remove('campo-texto')
@@ -211,7 +179,6 @@ const campoTransparente = () =>{
 }
 
 // Cambio de modo
-
 const cambioHeader = document.getElementById('contenedor-header')
 const inputModo = document.getElementById('modo')
 const cambioMain = document.getElementById('contenedor-main')
@@ -234,8 +201,6 @@ const botonReset = document.getElementById('boton-reset')
 
 inputModo.addEventListener('click', (evento) => cambioModo (evento))
 inputModo.addEventListener('click', (evento) => textModo (evento))
-
-
 const cambioModo = (e) =>{
     cambioHeader.classList.toggle('disenio-header');
     cambioHeader.classList.toggle('header-claro');
@@ -282,7 +247,6 @@ const cambioModo = (e) =>{
 }
 
 const textoModo = document.getElementById('texto-modo')
-
 const textModo = () =>{
     if (cambioHeader.classList.contains('disenio-header')){
         textoModo.innerText = "Modo claro"
@@ -291,13 +255,17 @@ const textModo = () =>{
         }
     }
 
+// Background Blend Mode 
+selectFondo.addEventListener('change', () => mezclaColor())
+const mezclaColor = () =>{
+    imagenElegida.style.backgroundBlendMode = `${selectFondo.value}`
+}
 
 // Descargar meme
 const contenedorMeme = document.getElementById('contenedor-memes')
 const botonDescarga = document.getElementById('descarga')
 
 botonDescarga.addEventListener('click', () => descargarMeme())
-
 const descargarMeme = () =>{
     domtoimage.toBlob(contenedorMeme).then(function (blob) {
         window.saveAs(blob, "meme.png");
@@ -319,7 +287,6 @@ const negativo = document.getElementById('img-negativo')
 const filtros = () =>{
     imagenElegida.style.filter = `brightness(${brillo.value}) opacity(${opacidad.value}) contrast(${contraste.value}%) blur(${desenfoque.value}px) grayscale(${grises.value}%) sepia(${sepia.value}%) hue-rotate(${hue.value}deg) saturate(${saturado.value}%) invert(${negativo.value})`;
 }
-
 brillo.addEventListener('input', () => filtros())
 opacidad.addEventListener('input', () => filtros())
 contraste.addEventListener('input', () => filtros())
@@ -330,9 +297,14 @@ hue.addEventListener('input', () => filtros())
 saturado.addEventListener('input', () => filtros())
 negativo.addEventListener('input', () => filtros())
 
+// Reestablecer filtros
+botonReset.addEventListener('click', () => resetFiltros())
+const resetFiltros = () =>{
+    imagenElegida.style.filter = `none`;
+    imagenElegida.style.backgroundBlendMode = `normal`;
+}
 
 // Alineado del texto
-
 botonLeft.addEventListener('click', () => alineacionIzq())
 botonCenter.addEventListener('click', () => alineacionCenter())
 botonRight.addEventListener('click', () => alineacionDer())
@@ -354,7 +326,6 @@ const alineacionDer = () =>{
 
 
 // Tamaño fuente
-
 tamanioFuente.addEventListener('input', () => cambioTamanio())
 
 const cambioTamanio = () =>{
@@ -363,10 +334,8 @@ const cambioTamanio = () =>{
     bottomTextMeme.style.fontSize = tamanio + `px`;
 }
 
-// Espaciado const inputEspaciado = document.getElementById('input-espaciado')
-
+// Espaciado e interlineado const inputEspaciado = document.getElementById('input-espaciado')
 inputEspaciado.addEventListener('input', () => espaciadoTexto())
-
 const espaciadoTexto = () =>{
     const espacio = inputEspaciado.value;
     topTextMeme.style.paddingBottom = espacio + `%`;
@@ -375,9 +344,7 @@ const espaciadoTexto = () =>{
     bottomTextMeme.style.paddingTop = espacio + `%`;
 }
 
-
 selectInterlineado.addEventListener('change', () => interlineadoTexto())
-
 const interlineadoTexto = () =>{
     contenedorMeme.style.lineHeight = `${selectInterlineado.value}`
 }

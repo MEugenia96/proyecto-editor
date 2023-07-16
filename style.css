@@ -28,6 +28,7 @@ body{
     width: 20vw; 
     margin-left: auto;
     padding: 2%;
+    font-size: 14px;
 }
 
 .input-claro{
@@ -103,6 +104,15 @@ body{
     color: #ffffff;
 }
 
+.boton-nav:hover, .boton-nav:active{
+    background-color: #610a64;
+    color: #ffffff;
+}
+
+#boton-img:focus, #boton-text:focus{
+    background-color: #610a64;
+    color: #ffffff;
+}
 
 .iconos{
     margin-top: 5%;
@@ -318,24 +328,32 @@ input[type=text]{
     #aside-texto{
         display: none;
     }
-    .seccion-botones{
+    .panel-botones{
         width: 100vw;
     }
     .titulo-proyecto{
         width: 100vw;
         text-align: center;
     }
-    .lista-nav{
+    .disenio-header, .header-claro{
         padding: 0px;
         width: 100vw;
     }
     .contenedor-memes{
-        width: 100vw;
+        width: 80vw;
+        height: 70vh;
         margin: auto;
         margin-top: 10%;
+        line-height: 2.5;
     }
     .contenedor-img{
-        width: 100%;
+        flex-grow: 1;
+    }
+    .texto{
+        font-size: 14px;
+    }
+    .campo-texto{
+        padding: 1% 0%;
     }
     .boton-nav{
         font-size: 14px;
@@ -373,11 +391,11 @@ input[type=text]{
     body{
         height: 100vh;
     }
-    .seccion-botones .titulo-proyecto{
+    .disenio-header, .header-claro, .titulo-proyecto{
         width: 100vw;
         text-align: center;
     }
-    .lista-nav{
+    .panel-botones{
         width: 100vw;
     }
     .contenedor-memes{

@@ -269,10 +269,8 @@ const cambioModo = (e) =>{
     botonCenter.classList.toggle('input-claro');
     botonRight.classList.toggle('color-alineado');
     botonRight.classList.toggle('input-claro');
-    botonContorno1.classList.toggle('color-alineado');
     botonContorno2.classList.toggle('color-alineado');
     botonContorno3.classList.toggle('color-alineado');
-    botonContorno1.classList.toggle('input-claro');
     botonContorno2.classList.toggle('input-claro');
     botonContorno3.classList.toggle('input-claro');
     inputEspaciado.classList.toggle('diseño-form');
@@ -363,4 +361,23 @@ const cambioTamanio = () =>{
     const tamanio = tamanioFuente.value;
     topTextMeme.style.fontSize = tamanio + `px`;
     bottomTextMeme.style.fontSize = tamanio + `px`;
+}
+
+// Espaciado const inputEspaciado = document.getElementById('input-espaciado')
+
+inputEspaciado.addEventListener('input', () => espaciadoTexto())
+
+const espaciadoTexto = () =>{
+    const espacio = inputEspaciado.value;
+    topTextMeme.style.paddingBottom = espacio + `%`;
+    topTextMeme.style.paddingTop = espacio + `%`;
+    bottomTextMeme.style.paddingBottom = espacio + `%`;
+    bottomTextMeme.style.paddingTop = espacio + `%`;
+}
+
+
+selectInterlineado.addEventListener('change', () => interlineadoTexto())
+
+const interlineadoTexto = () =>{
+    contenedorMeme.style.lineHeight = `${selectInterlineado.value}`
 }

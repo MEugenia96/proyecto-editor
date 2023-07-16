@@ -95,7 +95,7 @@ body{
 } 
 
 .boton-nav{
-    width: 100px;
+    width: 120px;
     text-decoration: none;
     background-color: transparent;
     border: none;
@@ -129,7 +129,7 @@ body{
 
 h3{
     font-size: 18px;
-    width: 100%;
+    width: 95%;
     text-align: center;
     padding: 2%;
 }
@@ -149,6 +149,7 @@ h3{
     height: 620px;
     margin-top: 0;
     align-items: center;
+    line-height: 1.5;
 }
 
 
@@ -297,6 +298,7 @@ input[type=text]{
 
 .boton-contorno.active{
     background-color: #610a64;
+    color: #ffffff;
 }
 
 .input-espaciado{

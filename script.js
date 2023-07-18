@@ -347,3 +347,7 @@ selectInterlineado.addEventListener('change', () => interlineadoTexto())
 const interlineadoTexto = () =>{
     contenedorMeme.style.lineHeight = `${selectInterlineado.value}`
 }
+
+
+
+

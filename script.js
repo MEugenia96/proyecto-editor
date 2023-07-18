@@ -168,7 +168,6 @@ const campoTransparente = () =>{
         topTextMeme.classList.add('transparente-top')
         bottomTextMeme.classList.remove('campo-texto')
         bottomTextMeme.classList.add('transparente-bottom')
-        imagenElegida.style.height  = '100%'
     }
     else if(checkTransparente.checked == false){
         topTextMeme.classList.remove('transparente-top')

@@ -347,7 +347,7 @@ const interlineadoTexto = () =>{
 // Cierre de aside
 
 const btnAsideImagen = document.getElementById('x-aside-img');
-const mediaQuery1 = window.matchMedia("(max-width:414px)");
+const mediaQuery1 = window.matchMedia("(max-width:418px)");
 if(mediaQuery1.matches){
     btnAsideImagen.classList.remove('hidden')
     btnAsideImagen.classList.add('boton-cierre')
@@ -358,7 +358,7 @@ const cierreAsideImg = () =>{
 }
 
 const btnAsideTexto = document.getElementById('x-aside-text');
-const mediaQuery2 = window.matchMedia("(max-width:414px)");
+const mediaQuery2 = window.matchMedia("(max-width:418px)");
 if(mediaQuery2.matches){
     btnAsideTexto.classList.remove('hidden')
     btnAsideTexto.classList.add('boton-cierre')

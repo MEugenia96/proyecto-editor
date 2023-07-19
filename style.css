@@ -377,6 +377,14 @@ select:focus{
     color: #ffffff;
 }
 
+.cerrar-aside{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: #610A64 0.5px ridge;
+    color: #610A64;
+}
+
 input[type='number']:hover, input[type='text']:hover, textarea:hover, .cuadro-color:hover, .input-claro:hover{
     background-color: #96079b;
     color: #ffffff;
@@ -465,37 +473,60 @@ input[type=range]:focus::-ms-fill-upper {
 
 /* Medias queries */
 
-@media (max-width:414px){
+@media (max-width:418px){
     
     #aside-imagen{
         position: absolute;
         width: 100vw; 
         justify-content: center;
+        padding: 5%;
+    }
+    #url-imagen{
+        width: 80%;
     }
     #aside-texto{
         position: absolute;
         width: 100vw; 
         justify-content: center;
+        padding: 5%;
+    }
+    #aside-texto div{
+        width: 80%;
+    }
+    #aside-texto .cuadro-color{
+        width: 100%;
+    }
+    #input-espaciado{
+        width: 80%;
+    }
+    #select-interlineado{
+        width: 80%;
     }
     .contenedor-filtros{
         width: 80vw;
         /* padding: 5%; */
     }
     .disenio-header, .header-claro{
-	position: relative;
+        position: relative;
         padding: 0px;
         width: 100vw;
-	text-align: center;
+        text-align: center;
     }
-
+    .titulo-proyecto{
+        width: 100vw;
+        align-content: center;
+    }
+    .panel-botones{
+        width: 100vw;
+        align-content: center;
+    }
     .disenio-main, .main-claro{
-	position: relative;
-	display: flex; 
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
+        position: relative;
+        display: flex; 
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
     }
-	
     .contenedor-memes{
         width: 80vw;
         height: 50vh;
@@ -512,6 +543,12 @@ input[type=range]:focus::-ms-fill-upper {
     }
     .boton-nav{
         font-size: 14px;
+    }
+    .boton-descarga{
+        width: 150px;
+        height: 50px;
+        font-size: 12px;
+        padding: 2%;
     }
 }
 

@@ -64,7 +64,10 @@
                 </main>
             </div>
 
-            <aside class="ubicacion-row disenio-aside" id="aside-imagen">
+            <aside class="disenio-aside" id="aside-imagen">
+                    <button class="cerrar-aside hidden" id="x-aside-img">
+                        <i class="fa-regular fa-circle-xmark"></i>
+                    </button>
                     <form id="editor-imagen" class="ubicacion-column">
                         <h3>IMAGEN</h3>
 
@@ -96,7 +99,6 @@
 
                         <div class="contenedor-filtros ubicacion-column" id="contenedor-filtros">
                             <p>FILTROS</p>
-
                             <label for="img-brillo" class="label-filtros">Brillo</label>
                             <input id="img-brillo" type="range" min="0" max="1" value="1" step="0.1"/>
                             
@@ -131,6 +133,9 @@
             </aside>
 
             <aside class="disenio-aside hidden" id="aside-texto">
+                <button class="cerrar-aside hidden" id="x-aside-text">
+                    <i class="fa-regular fa-circle-xmark"></i>
+                </button>
                 <h3>TEXTO</h3>
                 <form id="editor-texto" class="ubicacion-column form-texto">
                     <div class="espaciado-secciones">

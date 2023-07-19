@@ -69,10 +69,8 @@ const imagenMeme = document.getElementById('imagen-meme')
 const eliminarTextSup = (e) =>{
     if(inputSinTextoSup.checked == true){
         textoSuperior.classList.add('hidden')
-        // imagenMeme.classList.add('sin-texto')
     }else if(inputSinTextoSup.checked == false){
         textoSuperior.classList.remove('hidden')
-        // imagenMeme.classList.remove('sin-texto')
     }
 }
 inputSinTextoSup.addEventListener('change', (evento) => eliminarTextSup(evento))
@@ -98,8 +96,6 @@ const eliminarAmbosTextos = (e) =>{
     if(inputSinTextoSup.checked == true && inputSinTextoInf.checked == true){
         textoSuperior.classList.add('hidden')
         textoInferior.classList.add('hidden')
-        // imagenMeme.classList.remove('contenedor-img')
-        // imagenMeme.classList.add('sin-texto')
     }
 }
 
@@ -348,6 +344,27 @@ const interlineadoTexto = () =>{
     contenedorMeme.style.lineHeight = `${selectInterlineado.value}`
 }
 
+// Cierre de aside
 
+const btnAsideImagen = document.getElementById('x-aside-img');
+const mediaQuery1 = window.matchMedia("(max-width:414px)");
+if(mediaQuery1.matches){
+    btnAsideImagen.classList.remove('hidden')
+    btnAsideImagen.classList.add('boton-cierre')
+}
+btnAsideImagen.addEventListener('click', () => cierreAsideImg())
+const cierreAsideImg = () =>{
+    asideImagen.classList.add('hidden')
+}
 
+const btnAsideTexto = document.getElementById('x-aside-text');
+const mediaQuery2 = window.matchMedia("(max-width:414px)");
+if(mediaQuery2.matches){
+    btnAsideTexto.classList.remove('hidden')
+    btnAsideTexto.classList.add('boton-cierre')
+}
 
+btnAsideTexto.addEventListener('click', () => cierreAsideText())
+const cierreAsideText = () =>{
+    asideTexto.classList.add('hidden')
+}

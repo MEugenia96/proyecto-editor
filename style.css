@@ -1,6 +1,7 @@
 
 body{
     margin: 0;
+    overflow-x: hidden;
 }
 
 
@@ -15,7 +16,7 @@ body{
     background-color: #f7daf8;
     display: flex;
     align-items: center;
-    height: 100vh;
+    height: auto;
     justify-content: center;
 }
 
@@ -26,6 +27,7 @@ body{
     margin-left: auto;
     padding: 0% 2%;
     font-size: 14px;
+    height: auto;
 }
 
 .input-claro{
@@ -38,6 +40,7 @@ body{
     background-color: #b26fb4;
     color:#610a64;
 }
+/* _______________ */
 
 .contorno-oscuro{
     text-shadow: -1px -1px 2px #000, 1px 1px 2px #000, -1px 1px 2px #000, 1px -1px 2px #000;
@@ -48,8 +51,6 @@ body{
     text-shadow: -1px -1px 2px #ffffff, 1px 1px 2px #ffffff, -1px 1px 2px #ffffff, 1px -1px 2px #ffffff;
     -webkit-text-stroke: 2px white;
 }
-
-/* _______________ */
 
 .transparente-top{
     position: absolute;
@@ -135,6 +136,7 @@ body{
     width: 20vw; 
     margin-left: auto;
     padding: 0% 2%;
+    height: auto;
 }
 
 .disenio-aside label {
@@ -163,7 +165,7 @@ h3{
 
 .disenio-main{
     display: flex;
-    height: 100vh;
+    height: auto;
     justify-content: center;
     align-items: center;
     background-color: #30343f;
@@ -462,7 +464,58 @@ input[type=range]:focus::-ms-fill-upper {
 
 
 /* Medias queries */
+
 @media (max-width:414px){
+    
+    #aside-imagen{
+        position: absolute;
+        width: 100vw; 
+        justify-content: center;
+    }
+    #aside-texto{
+        position: absolute;
+        width: 100vw; 
+        justify-content: center;
+    }
+    .contenedor-filtros{
+        width: 80vw;
+        /* padding: 5%; */
+    }
+    .disenio-header, .header-claro{
+	position: relative;
+        padding: 0px;
+        width: 100vw;
+	text-align: center;
+    }
+
+    .disenio-main, .main-claro{
+	position: relative;
+	display: flex; 
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    }
+	
+    .contenedor-memes{
+        width: 80vw;
+        height: 50vh;
+        line-height: 2.5;
+    }
+    .contenedor-img{
+        flex-grow: 1; 
+    }
+    .texto{
+        font-size: 14px;
+    }
+    .campo-texto{
+        padding: 1% 0%;
+    }
+    .boton-nav{
+        font-size: 14px;
+    }
+}
+
+/* @media (max-width:414px){
     #aside-imagen{
         display: none;
     }
@@ -550,5 +603,5 @@ input[type=range]:focus::-ms-fill-upper {
         margin: auto;
         margin-top: 20%;
     }
-}
+} */
 
